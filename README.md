@@ -38,10 +38,24 @@ See this [example](./docs/source/demo.ipynb).
 
 The queueserver has a host process that manages a RunEngine. Client sessions will interact with that host process.  See [qs/README](./qs/README.md) for more details.
 
+File [`qs-config.yml`](./qs/qs-config.yml) contains all configuration of the QS
+host process.
+
 ### Run a queueserver host process
 
+Use the queueserver host management script.  This option stops the server (if it
+is running) and then starts it.  This is the usual way to (re)start the QS host
+process.
+
 ```bash
-start-re-manager --config=./qs/config.yml
+./qs/qs_host.sh restart
+```
+
+Alternatively, run it directly within the `qs/` subdirectory.
+
+```bash
+cd .qs
+start-re-manager --config=./qs-config.yml
 ```
 
 ### Run a queueserver client GUI
