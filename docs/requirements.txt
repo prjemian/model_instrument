@@ -1,0 +1,12 @@
+babel
+ipykernel
+ipython
+jinja2
+markupsafe
+myst-parser
+nbsphinx
+pygments
+pygments-ipython-console
+sphinx
+sphinx-design
+sphinx-tabs
