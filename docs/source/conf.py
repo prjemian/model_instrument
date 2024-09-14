@@ -63,7 +63,9 @@ autodoc_mock_imports = """
     databroker
     epics
     intake
+    matplotlib
     numpy
     ophyd
+    ophydregistry
     pandas
 """.split()
