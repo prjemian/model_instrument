@@ -9,7 +9,9 @@ copyright = "2014-2024, Pete R. Jemian"
 name = "bluesky_session"
 dynamic = ["version"]
 description = "bluesky_session: Bluesky Data Acquisition in a Queueserver session."
-authors = [{ name = "Pete Jemian", email = "prjemian+bluesky_session@gmail.com" }]
+authors = [
+    { name = "Pete Jemian", email = "prjemian+bluesky_session@gmail.com" },
+]
 maintainers = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+bluesky_session@gmail.com" },
@@ -45,8 +47,23 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["build", "mypy", "pre-commit", "pytest>=7.4.4", "ruff", "isort"]
-doc = ["myst_parser", "nbsphinx"]  # also: conda install conda-forge::pandoc
+dev = ["build", "isort", "mypy", "pre-commit", "pytest", "ruff"]
+
+# doc: conda install conda-forge::pandoc
+doc = [
+    "babel",
+    "ipykernel",
+    "jinja2",
+    "markupsafe",
+    "myst_parser",
+    "nbsphinx",
+    "pygments-ipython-console",
+    "pygments",
+    "sphinx-design",
+    "sphinx-tabs",
+    "sphinx",
+]
+
 all = ["bluesky_session[dev,doc]"]
 
 [project.urls]

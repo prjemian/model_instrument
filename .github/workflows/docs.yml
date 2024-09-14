@@ -39,7 +39,8 @@ jobs:
 
     - name: Install pandoc
       run: |
-        sudo apt-get update && \
+        set -vxeuo pipefail
+        sudo apt-get update
         sudo apt-get -y install pandoc
 
     - name: Set time zone
@@ -48,49 +49,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+        fetch-depth: 0 # required for push to dest repo
 
     - uses: actions/setup-python@v5
       with:
           python-version: "3.11"
-  
-    - name: Install Sphinx build requirements
-      run: pip install -r ./docs/requirements.txt
 
     - name: Install our package
-      run: pip install --no-deps -e . -vv
-  
-    # - name: Sphinx build
-    #   id: deployment
-    #   uses: sphinx-notes/pages@v3
-    #   with:
-    #     documentation_path: ./docs/source
-    #     publish: false
-    #     requirements_path: ./docs/requirements.txt
+      run: pip install -e .[doc] -vv
 
     - name: Sphinx
       id: deployment
       run: make -C docs html
-
-    - name: Diagnostic
-      run: ls -lAFgh docs/build/html
-      # ${{ steps.deployment.outputs.artifact }}
-
-    - name: Upload Docs ZIP file as artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: gemviz-docs
-        path: docs/build/html
-        # ${{ steps.deployment.outputs.artifact }}
-
-    # - name: Diagnostic
-    #   run: ls -lAFgh ${{ steps.deployment.outputs.artifact }}
-
-    # - name: Upload Docs ZIP file as artifact
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: bluesky_session-docs
-    #     path: ${{ steps.deployment.outputs.artifact }}
     
     - name: Publish (push gh-pages branch) only on demand
       uses: peaceiris/actions-gh-pages@v4
@@ -98,6 +68,5 @@ jobs:
       with:
         publish_branch: gh-pages
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        # publish_dir: ${{ steps.deployment.outputs.artifact }}
         publish_dir: docs/build/html
         force_orphan: true
