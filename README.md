@@ -36,10 +36,9 @@ See this [example](./docs/source/demo.ipynb).
 
 ## queueserver
 
-The queueserver has a host process that manages a RunEngine. Client sessions will interact with that host process.  See [qs/README](./qs/README.md) for more details.
-
-File [`qs-config.yml`](./qs/qs-config.yml) contains all configuration of the QS
-host process.
+The queueserver has a host process that manages a RunEngine. Client sessions
+will interact with that host process.  See [qs/README](./qs/README.md) for more
+details.
 
 ### Run a queueserver host process
 
@@ -51,13 +50,6 @@ process.
 ./qs/qs_host.sh restart
 ```
 
-Alternatively, run it directly within the `qs/` subdirectory.
-
-```bash
-cd .qs
-start-re-manager --config=./qs-config.yml
-```
-
 ### Run a queueserver client GUI
 
 At this time, there is one GUI recommended for use with the bluesky queueserver.
@@ -66,11 +58,4 @@ use this one.
 
 ```bash
 queue-monitor &
-```
-
-## NOTES
-
-```py
-import matplotlib.pyplot as plt
-plt.ion()
 ```

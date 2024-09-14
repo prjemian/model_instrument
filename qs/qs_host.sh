@@ -27,7 +27,7 @@ STARTUP_COMMAND="${PROCESS} --config=${QS_CONFIG_YML}"
 #--------------------
 # internal configuration below
 
-echo "PROCESS=${PROCESS}"
+# echo "PROCESS=${PROCESS}"
 if [ ! -f $(which "${PROCESS}") ]; then
     echo "PROCESS '${PROCESS}': file not found. CONDA_PREFIX='${CONDA_PREFIX}'"
     exit 1
@@ -59,10 +59,10 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-echo "SESSION_NAME = ${SESSION_NAME}"
-echo "SHELL_SCRIPT_NAME = ${SHELL_SCRIPT_NAME}"
-echo "STARTUP_COMMAND = ${STARTUP_COMMAND}"
-echo "STARTUP_DIR = ${STARTUP_DIR}"
+# echo "SESSION_NAME = ${SESSION_NAME}"
+# echo "SHELL_SCRIPT_NAME = ${SHELL_SCRIPT_NAME}"
+# echo "STARTUP_COMMAND = ${STARTUP_COMMAND}"
+# echo "STARTUP_DIR = ${STARTUP_DIR}"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
