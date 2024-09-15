@@ -13,6 +13,7 @@ API: The Source Code
     ~instrument_template.utils.best_effort
     ~instrument_template.utils.catalog
     ~instrument_template.utils.functions
+    ~instrument_template.utils.config
     ~instrument_template.utils.mpl_setup
     ~instrument_template.utils.registry
     ~instrument_template.utils.run_engine
@@ -32,6 +33,7 @@ the bluesky queueserver.
 .. automodule:: instrument_template.utils.best_effort
 .. automodule:: instrument_template.utils.catalog
 .. automodule:: instrument_template.utils.functions
+.. automodule:: instrument_template.utils.config
 .. automodule:: instrument_template.utils.mpl_setup
 .. automodule:: instrument_template.utils.registry
 .. automodule:: instrument_template.utils.run_engine

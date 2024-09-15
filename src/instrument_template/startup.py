@@ -2,7 +2,7 @@
 Start a Bluesky Data Acquisition session in console, notebook, & queueserver.
 """
 
-import logging
+import logging  # TODO: replace with custom logging configuration
 
 logger = logging.getLogger(__name__)  # noqa
 logger.info(__file__)  # noqa
@@ -32,8 +32,7 @@ else:
 
 from .callbacks import *  # noqa
 from .plans import *  # noqa
-
-# TODO: developer use only
+# TODO: remove for production
 from .utils.tests.common import *  # noqa
 
 subscribe_re_callbacks(RE)  # Setup RE _after_ the devices are created.

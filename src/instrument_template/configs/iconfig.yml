@@ -1,0 +1,83 @@
+# Configuration for the Bluesky instrument package.
+# Add additional configuration for use with your instrument.
+
+### The short name for the databroker catalog.
+DATABROKER_CATALOG: &databroker_catalog temp
+
+### RunEngine configuration
+RUN_ENGINE:
+    DEFAULT_METADATA:
+        beamline_id: instrument_template
+        instrument_name: Most Glorious Scientific Instrument
+        proposal_id: commissioning
+        databroker_catalog: *databroker_catalog
+
+    ### EPICS PV to use for the `scan_id`.
+    ### Default: `RE.md["scan_id"]` (not using an EPICS PV)
+    # SCAN_ID_PV: f"{IOC}bluesky_scan_id"
+
+    ### Directory to "autosave" the RE.md dictionary (uses PersistentDict).
+    ### Default: HOME/.config/Bluesky_RunEngine_md'
+    # MD_PATH: /home/beams/USERNAME/.config/Bluesky_RunEngine_md
+
+### Best Effort Callback Configurations
+BEC:
+    BASELINE: FALSE
+    PLOTS: FALSE
+
+AREA_DETECTOR:
+    ALLOW_PLUGIN_WARMUP: true
+    BLUESKY_FILES_ROOT: &BLUESKY_DATA_ROOT "/path/to/data/"
+    IMAGE_DIR: "sub/directory/path"
+    HDF5_FILE_TEMPLATE: "%s%s_%6.6d.h5"
+    # Add configuration for specific detector(s).
+    # Example:
+    # ADSIM_16M:
+    #     # IOC host: workstation_name
+    #     IOC_FILES_ROOT: *BLUESKY_DATA_ROOT
+    #     NAME: simdet16M
+    #     PV_PREFIX: "simdet16m:"
+
+### The progress bar is nice to see,
+### except when it clutters the output in Jupyter notebooks.
+USE_PROGRESS_BAR: false
+
+### Support for known output file formats.  
+### Uncomment to use.  If undefined, will not write that type of file.
+# NEXUS_DATA_FILES:
+#     FILE_EXTENSION: hdf
+#     WARN_MISSING_CONTENT: true
+SPEC_DATA_FILES:
+    FILE_EXTENSION: dat
+
+### APS Data Management
+### Use bash shell, deactivate all conda environments, source this file:
+DM_SETUP_FILE: "/home/dm/etc/dm.setup.sh"
+
+# ----------------------------------
+
+OPHYD:
+    ### Control layer for ophyd to communicate with EPICS.
+    ### Default: PyEpics
+    ### Choices: "PyEpics" or "caproto"
+    # CONTROL_LAYER: caproto
+
+    ### default timeouts (seconds)
+    TIMEOUTS:
+        PV_READ: &TIMEOUT 5
+        PV_WRITE: *TIMEOUT
+        PV_CONNECTION: *TIMEOUT
+
+### Uncomment any of these to override the defaults
+LOGGING:
+    # MAX_BYTES: 1000000
+    NUMBER_OF_PREVIOUS_BACKUPS: 9
+    # LOG_PATH: /tmp
+    ### If LOG_PATH undefined, this session will log into PWD/logs/
+    ### where PWD is present working directory when session is started
+
+# Control detail of exception traces in IPython (console and notebook).
+XMODE_DEBUG_LEVEL: Minimal
+
+# identify the version of this iconfig.yml file
+ICONFIG_VERSION: 2.0.0
