@@ -167,3 +167,4 @@ _version.py
 # Developer content
 dev_*
 qs/existing_plans_and_devices.yaml
+.vscode/
