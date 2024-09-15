@@ -36,4 +36,4 @@ from .plans import *  # noqa
 # TODO: developer use only
 from .utils.tests.common import *  # noqa
 
-subscribe_re_callbacks(RE)  # after the devices are created
+subscribe_re_callbacks(RE)  # Setup RE _after_ the devices are created.
