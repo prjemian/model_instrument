@@ -7,10 +7,15 @@ Setup the Bluesky RunEngine, provides ``RE`` and ``sd``.
     ~sd
 """
 
+import logging
+
 import bluesky
 
 from .best_effort import bec
 from .catalog import cat
+
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 RE = bluesky.RunEngine()
 """The bluesky RunEngine object."""

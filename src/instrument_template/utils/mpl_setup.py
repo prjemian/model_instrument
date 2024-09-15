@@ -7,7 +7,12 @@ MatPlotLib setup.
     ~is_notebook
 """
 
+import logging
+
 from .functions import running_in_queueserver
+
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 
 def is_notebook():

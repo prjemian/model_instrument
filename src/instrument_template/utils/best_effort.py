@@ -7,9 +7,14 @@ BestEffortCallback: simple real-time visualizations, provides ``bec``.
     ~peaks
 """
 
+import logging
+
 from bluesky.callbacks.best_effort import BestEffortCallback
 
 from .functions import running_in_queueserver
+
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 bec = BestEffortCallback()
 """BestEffortCallback object, creates live tables and plots."""
