@@ -1,5 +1,5 @@
 """
-Start a Bluesky Data Acquisition session.
+Start a Bluesky Data Acquisition session in console, notebook, & queueserver.
 """
 
 from .utils.best_effort import bec  # noqa

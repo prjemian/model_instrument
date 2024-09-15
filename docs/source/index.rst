@@ -1,5 +1,5 @@
 instrument_template
-===============
+===================
 
 Bluesky Data Acquisition in console, notebook, & queueserver.
 

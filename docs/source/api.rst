@@ -1,11 +1,15 @@
 API: The Source Code
 ====================
 
-.. rubric:: Utilities
 .. autosummary::
     :nosignatures:
 
     ~instrument_template.startup
+
+.. rubric:: Utilities
+.. autosummary::
+    :nosignatures:
+
     ~instrument_template.utils.best_effort
     ~instrument_template.utils.catalog
     ~instrument_template.utils.functions
@@ -15,7 +19,7 @@ API: The Source Code
     ~instrument_template.utils.tests.common
 
 ``instrument_template.startup``
----------------------------
+-------------------------------
 
 This same code can be used with IPython console & Jupyter notebook sessions and
 the bluesky queueserver.
