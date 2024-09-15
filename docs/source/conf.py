@@ -6,9 +6,15 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import instrument_template
+
 project = "instrument_template"
 copyright = "2023-2024, APS BCDA"
 author = "APS BCDA"
+version = instrument_template.__version__
+release = ".".join(version.split(".")[:2])
+if len(release) < len(version):
+    release += "+"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
