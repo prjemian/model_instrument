@@ -1,5 +1,5 @@
-instrument_template (|release|)
-===============================
+instrument (|release|)
+======================
 
 Bluesky Data Acquisition in console, notebook, & queueserver.
 

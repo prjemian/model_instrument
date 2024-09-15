@@ -14,6 +14,7 @@ API: The Source Code
     ~instrument.utils.catalog
     ~instrument.utils.functions
     ~instrument.utils.config
+    ~instrument.utils.metadata
     ~instrument.utils.mpl_setup
     ~instrument.utils.registry
     ~instrument.utils.run_engine
@@ -34,6 +35,7 @@ the bluesky queueserver.
 .. automodule:: instrument.utils.catalog
 .. automodule:: instrument.utils.functions
 .. automodule:: instrument.utils.config
+.. automodule:: instrument.utils.metadata
 .. automodule:: instrument.utils.mpl_setup
 .. automodule:: instrument.utils.registry
 .. automodule:: instrument.utils.run_engine

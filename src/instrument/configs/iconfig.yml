@@ -21,9 +21,12 @@ RUN_ENGINE:
     # MD_PATH: /home/beams/USERNAME/.config/Bluesky_RunEngine_md
 
 ### Best Effort Callback Configurations
-BEC:
-    BASELINE: FALSE
-    PLOTS: FALSE
+### Defaults: all true (except no plots in queueserver)
+# BEC:
+#     BASELINE: false
+#     HEADING: false
+#     PLOTS: false
+#     TABLE: false
 
 AREA_DETECTOR:
     ALLOW_PLUGIN_WARMUP: true
