@@ -6,20 +6,20 @@ build-backend = "setuptools.build_meta"
 copyright = "2014-2024, Pete R. Jemian"
 
 [project]
-name = "bluesky_session"
+name = "instrument_template"
 dynamic = ["version"]
-description = "bluesky_session: Bluesky Data Acquisition in a Queueserver session."
+description = "instrument_template: Bluesky Data Acquisition in console, notebook, & queueserver."
 authors = [
-    { name = "Pete Jemian", email = "prjemian+bluesky_session@gmail.com" },
+    { name = "Pete Jemian", email = "prjemian+instrument_template@gmail.com" },
 ]
 maintainers = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
-    { name = "Pete Jemian", email = "prjemian+bluesky_session@gmail.com" },
+    { name = "Pete Jemian", email = "prjemian+instrument_template@gmail.com" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"
 keywords = ['bluesky', 'queueserver']
-license = { file = "src/bluesky_session/LICENSE" }
+license = { file = "src/instrument_template/LICENSE" }
 classifiers = [
     "Development Status :: 6 - Mature",
     "Environment :: Console",
@@ -64,14 +64,14 @@ doc = [
     "sphinx",
 ]
 
-all = ["bluesky_session[dev,doc]"]
+all = ["instrument_template[dev,doc]"]
 
 [project.urls]
-"Homepage" = "https://prjemian.github.io/bluesky_session/"
-"Bug Tracker" = "https://github.com/prjemian/bluesky_session/issues"
+"Homepage" = "https://prjemian.github.io/instrument_template/"
+"Bug Tracker" = "https://github.com/prjemian/instrument_template/issues"
 
 # [project.scripts]
-# bluesky_session = "bluesky_session.app:main"
+# instrument_template = "instrument_template.app:main"
 
 [tool.black]
 line-length = 115
@@ -220,4 +220,4 @@ line-ending = "auto"
 "*" = ["*.yml"]
 
 [tool.setuptools_scm]
-write_to = "src/bluesky_session/_version.py"
+write_to = "src/instrument_template/_version.py"

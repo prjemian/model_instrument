@@ -5,30 +5,30 @@ API: The Source Code
 .. autosummary::
     :nosignatures:
 
-    ~bluesky_session.startup
-    ~bluesky_session.utils.best_effort
-    ~bluesky_session.utils.catalog
-    ~bluesky_session.utils.functions
-    ~bluesky_session.utils.mpl_setup
-    ~bluesky_session.utils.registry
-    ~bluesky_session.utils.run_engine
-    ~bluesky_session.utils.tests.common
+    ~instrument_template.startup
+    ~instrument_template.utils.best_effort
+    ~instrument_template.utils.catalog
+    ~instrument_template.utils.functions
+    ~instrument_template.utils.mpl_setup
+    ~instrument_template.utils.registry
+    ~instrument_template.utils.run_engine
+    ~instrument_template.utils.tests.common
 
-``bluesky_session.startup``
+``instrument_template.startup``
 ---------------------------
 
 This same code can be used with IPython console & Jupyter notebook sessions and
 the bluesky queueserver.
 
-.. literalinclude:: ../../src/bluesky_session/startup.py
+.. literalinclude:: ../../src/instrument_template/startup.py
     :language: python
     :linenos:
 
-.. automodule:: bluesky_session.startup
-.. automodule:: bluesky_session.utils.best_effort
-.. automodule:: bluesky_session.utils.catalog
-.. automodule:: bluesky_session.utils.functions
-.. automodule:: bluesky_session.utils.mpl_setup
-.. automodule:: bluesky_session.utils.registry
-.. automodule:: bluesky_session.utils.run_engine
-.. automodule:: bluesky_session.utils.tests.common
+.. automodule:: instrument_template.startup
+.. automodule:: instrument_template.utils.best_effort
+.. automodule:: instrument_template.utils.catalog
+.. automodule:: instrument_template.utils.functions
+.. automodule:: instrument_template.utils.mpl_setup
+.. automodule:: instrument_template.utils.registry
+.. automodule:: instrument_template.utils.run_engine
+.. automodule:: instrument_template.utils.tests.common

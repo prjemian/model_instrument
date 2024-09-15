@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "bluesky_session"
+project = "instrument_template"
 copyright = "2023-2024, APS BCDA"
 author = "APS BCDA"
 

@@ -1,14 +1,14 @@
-# bluesky_session
+# instrument_template
 
-Bluesky Data Acquisition in a Queueserver session.
+Bluesky Data Acquisition in console, notebook, & queueserver.
 
 ## Installation
 
 Set up the development environment.
 
 ```bash
-conda create -y -n bluesky_session python pyqt=5
-conda activate bluesky_session
+conda create -y -n instrument_template python pyqt=5
+conda activate instrument_template
 pip install -e .[all]
 ```
 
@@ -19,7 +19,7 @@ ipython
 ```
 
 ```py
-from bluesky_session.startup import *
+from instrument_template.startup import *
 ```
 
 ## Jupyter notebook
@@ -29,7 +29,7 @@ Start JupyterLab, a Jupyter notebook server, or a notebook, VSCode.
 Start the data acquisition:
 
 ```py
-from bluesky_session.startup import *
+from instrument_template.startup import *
 ```
 
 See this [example](./docs/source/demo.ipynb).
