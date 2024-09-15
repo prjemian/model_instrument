@@ -3,4 +3,4 @@
 Software License
 ================
 
-.. literalinclude:: ../../src/instrument_template/LICENSE
+.. literalinclude:: ../../src/instrument/LICENSE

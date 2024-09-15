@@ -17,7 +17,7 @@ Examples from the ``iconfig.yml`` configuration file:
     ICONFIG_VERSION: 2.0.0
     RUN_ENGINE:
         DEFAULT_METADATA:
-            beamline_id: instrument_template
+            beamline_id: instrument
             databroker_catalog: temp
             instrument_name: Most Glorious Scientific Instrument
             proposal_id: commissioning

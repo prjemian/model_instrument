@@ -1,8 +1,8 @@
 # -*- coding: iso-8859-1 -*-
 
-"""instrument_template: Bluesky Data Acquisition in console, notebook, & queueserver."""
+"""instrument: Bluesky Data Acquisition in console, notebook, & queueserver."""
 
-__package__ = "instrument_template"
+__package__ = "instrument"
 
 try:
     from setuptools_scm import get_version

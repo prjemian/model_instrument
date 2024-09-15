@@ -2,6 +2,12 @@
 
 Bluesky Data Acquisition in console, notebook, & queueserver.
 
+## Startup
+
+```py
+from instrument.startup import *
+```
+
 ## Installation
 
 Set up the development environment.

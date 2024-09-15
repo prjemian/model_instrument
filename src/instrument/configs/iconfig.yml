@@ -7,7 +7,7 @@ DATABROKER_CATALOG: &databroker_catalog temp
 ### RunEngine configuration
 RUN_ENGINE:
     DEFAULT_METADATA:
-        beamline_id: instrument_template
+        beamline_id: instrument
         instrument_name: Most Glorious Scientific Instrument
         proposal_id: commissioning
         databroker_catalog: *databroker_catalog

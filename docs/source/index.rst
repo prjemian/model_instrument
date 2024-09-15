@@ -3,6 +3,13 @@ instrument_template (|release|)
 
 Bluesky Data Acquisition in console, notebook, & queueserver.
 
+Start the data collection session with the same command, whether in the IPython
+console, a Jupyter notebook, the queueserver, or even a Python script:
+
+.. code-block:: py
+
+   from instrument.startup import *
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

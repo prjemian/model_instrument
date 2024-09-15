@@ -6,20 +6,20 @@ build-backend = "setuptools.build_meta"
 copyright = "2014-2024, Pete R. Jemian"
 
 [project]
-name = "instrument_template"
+name = "instrument"
 dynamic = ["version"]
-description = "instrument_template: Bluesky Data Acquisition in console, notebook, & queueserver."
+description = "instrument: Bluesky Data Acquisition in console, notebook, & queueserver."
 authors = [
-    { name = "Pete Jemian", email = "prjemian+instrument_template@gmail.com" },
+    { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
 ]
 maintainers = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
-    { name = "Pete Jemian", email = "prjemian+instrument_template@gmail.com" },
+    { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"
 keywords = ['bluesky', 'queueserver']
-license = { file = "src/instrument_template/LICENSE" }
+license = { file = "src/instrument/LICENSE" }
 classifiers = [
     "Development Status :: 6 - Mature",
     "Environment :: Console",
@@ -64,14 +64,14 @@ doc = [
     "sphinx",
 ]
 
-all = ["instrument_template[dev,doc]"]
+all = ["instrument[dev,doc]"]
 
 [project.urls]
 "Homepage" = "https://prjemian.github.io/instrument_template/"
 "Bug Tracker" = "https://github.com/prjemian/instrument_template/issues"
 
 # [project.scripts]
-# instrument_template = "instrument_template.app:main"
+# instrument = "instrument.app:main"
 
 [tool.black]
 line-length = 115
@@ -220,4 +220,4 @@ line-ending = "auto"
 "*" = ["*.yml"]
 
 [tool.setuptools_scm]
-write_to = "src/instrument_template/_version.py"
+write_to = "src/instrument/_version.py"
