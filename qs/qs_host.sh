@@ -6,12 +6,13 @@
 
 SHELL_SCRIPT_NAME=${BASH_SOURCE:-${0}}
 SCRIPT_DIR="$( cd -- "$( dirname -- "${SHELL_SCRIPT_NAME}" )" &> /dev/null && pwd )"
+CONFIGS_DIR="${SCRIPT_DIR}"/../src/instrument/configs
 
 #--------------------
 # change the program defaults here
 
 # Instrument configuration YAML file with databroker catalog name.
-ICONFIG_YML="${SCRIPT_DIR}"/../src/instrument/configs/iconfig.yml
+ICONFIG_YML="${CONFIGS_DIR}"/iconfig.yml
 
 # Bluesky queueserver configuration YAML file.
 # This file contains the definition of 'redis_addr'.  (default: localhost:6379)
