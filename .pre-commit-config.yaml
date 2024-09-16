@@ -18,6 +18,7 @@ repos:
       # - id: check-json
       # - id: check-symlinks
       - id: check-executables-have-shebangs
+  # Don't strip output from jupyter notebooks ATM.
   # - repo: https://github.com/kynan/nbstripout
   #   rev: 0.7.1
   #   hooks:
