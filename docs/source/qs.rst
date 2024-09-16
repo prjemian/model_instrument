@@ -7,7 +7,11 @@ The bluesky queueserver [#]_ manages sequencing and execution of Bluesky plans.
 It has a host process that manages a RunEngine. Client sessions will interact
 with that host process.  See :ref:`qs.host.configure` for more details.
 
+The queueserver requires a ``redis`` service [#]_ to be running.  File
+``qs/qs-config.yml`` has settings to connect with and use the ``redis`` server.
+
 .. [#] https://blueskyproject.io/bluesky-queueserver/
+.. [#] https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/
 
 .. _qs.host:
 
@@ -18,7 +22,7 @@ Use the queueserver host management script.  This option stops the server (if it
 is running) and then starts it.  This is the usual way to (re)start the QS host
 process.
 
-::
+.. code-block:: bash
 
     ./qs/qs_host.sh restart
 
@@ -31,7 +35,7 @@ At this time, there is one GUI recommended for use with the bluesky queueserver.
 Other GUI clients are in development and show promise of improvements.  For now,
 use this one.
 
-::
+.. code-block:: bash
 
     queue-monitor &
 

@@ -17,7 +17,9 @@ Once in the web browser, open a new notebook.  Pick the kernel with your bluesky
 installation, including the `instrument` package you installed.
 
 When ready to load the bluesky data acquisition for use, type this in a notebook
-code cell::
+code cell:
+
+.. code-block:: py
 
     from instrument.startup import *
 
@@ -32,7 +34,9 @@ Once in the web browser, open a new notebook.  Pick the kernel with your bluesky
 installation, including the `instrument` package you installed.
 
 When ready to load the bluesky data acquisition for use, type this in a notebook
-code cell::
+code cell:
+
+.. code-block:: py
 
     from instrument.startup import *
 
@@ -52,6 +56,8 @@ Pick the kernel with your bluesky installation, including the `instrument`
 package you installed.
 
 When ready to load the bluesky data acquisition for use, type this in a notebook
-code cell::
+code cell:
+
+.. code-block:: py
 
     from instrument.startup import *

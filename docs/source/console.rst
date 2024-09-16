@@ -58,6 +58,6 @@ Shortcut
 
 Here's a shortcut that combines both steps:
 
-    .. code-block::
+.. code-block::
 
-        ipython -i -c "from instrument.startup import *"
+    ipython -i -c "from instrument.startup import *"
