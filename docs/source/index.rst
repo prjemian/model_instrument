@@ -7,8 +7,14 @@ Start the data collection session with the same command, whether in the IPython
 console, a Jupyter notebook, the queueserver, or even a Python script:
 
 .. code-block:: py
+      :linenos:
 
-   from instrument.startup import *
+      from instrument.startup import *
+      from instrument.utils.tests.common import *
+
+      RE(sim_print_plan())
+      RE(sim_count_plan())
+      RE(sim_rel_scan_plan())
 
 .. toctree::
    :maxdepth: 2

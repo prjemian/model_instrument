@@ -2,10 +2,15 @@
 
 Bluesky Data Acquisition in console, notebook, & queueserver.
 
-## Startup
+## Demo
 
 ```py
 from instrument.startup import *
+from instrument.utils.tests.common import *
+
+RE(sim_print_plan())
+RE(sim_count_plan())
+RE(sim_rel_scan_plan())
 ```
 
 ## Installation

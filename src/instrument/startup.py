@@ -32,7 +32,5 @@ else:
 
 from .callbacks import *  # noqa
 from .plans import *  # noqa
-# TODO: remove for production
-from .utils.tests.common import *  # noqa
 
 subscribe_re_callbacks(RE)  # Setup RE _after_ the devices are created.
