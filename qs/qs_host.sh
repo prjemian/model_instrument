@@ -6,10 +6,13 @@
 
 SHELL_SCRIPT_NAME=${BASH_SOURCE:-${0}}
 SCRIPT_DIR="$( cd -- "$( dirname -- "${SHELL_SCRIPT_NAME}" )" &> /dev/null && pwd )"
-CONFIGS_DIR="${SCRIPT_DIR}"/../src/instrument/configs
+# CONFIGS_DIR="${SCRIPT_DIR}"/../src/instrument/configs
+command="import pathlib, instrument;"
+command+="print(pathlib.Path(instrument.__file__).parent / 'configs')"
+CONFIGS_DIR=$(python -c "${command}")
 
-#--------------------
-# change the program defaults here
+###-----------------------------
+### Change program defaults here
 
 # Instrument configuration YAML file with databroker catalog name.
 ICONFIG_YML="${CONFIGS_DIR}"/iconfig.yml
