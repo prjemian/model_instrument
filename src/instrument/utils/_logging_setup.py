@@ -52,7 +52,7 @@ logging_setup = iconfig.get("LOGGING", {})
 
 log_path = logging_setup.get("LOG_PATH", None)
 if log_path is not None:
-    log_path= pathlib.Path(log_path)
+    log_path = pathlib.Path(log_path)
 
 CHOICES = dict(
     LOG_PATH=log_path,

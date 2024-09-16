@@ -61,7 +61,7 @@ jobs:
     - name: Sphinx
       id: deployment
       run: make -C docs html
-    
+
     - name: Publish (push gh-pages branch) only on demand
       uses: peaceiris/actions-gh-pages@v4
       if: ${{ github.event.inputs.deploy }}
