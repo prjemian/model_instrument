@@ -9,10 +9,12 @@ Includes:
 * Bluesky queueserver
 """
 
-from .utils import logger  # noqa
+# logging setup first
+from .utils import logger
 
-logger.info(__file__)  # noqa
+logger.info(__file__)
 
+# Bluesky data acquisition setup
 from .utils.best_effort import bec  # noqa
 from .utils.best_effort import peaks  # noqa
 from .utils.catalog import cat  # noqa
@@ -21,6 +23,7 @@ from .utils.ophyd_setup import oregistry  # noqa
 from .utils.run_engine import RE  # noqa
 from .utils.run_engine import sd  # noqa
 
+# Configure the session with callbacks, devices, and plans.
 # These imports must come after the above setup.
 if running_in_queueserver():
     from apstools.plans import lineup2  # noqa
@@ -37,4 +40,6 @@ else:
 
 from .callbacks import *  # noqa
 from .plans import *  # noqa
+
+# TODO: Loads plans for development, remove for production.
 from .utils.tests.common import *  # noqa
