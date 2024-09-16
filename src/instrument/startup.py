@@ -1,5 +1,5 @@
 """
-Start a Bluesky Data Acquisition session in console, notebook, & queueserver.
+Start Bluesky Data Acquisition sessions in script, console, notebook, & queueserver.
 """
 
 import logging  # TODO: replace with custom logging configuration
