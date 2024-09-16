@@ -17,6 +17,7 @@ logger.info(__file__)  # noqa
 from .best_effort import bec  # noqa
 from .catalog import cat  # noqa
 from .config import iconfig  # noqa
+from .epics_tools import connect_scan_id_pv  # noqa
 from .metadata import MD_PATH  # noqa
 from .metadata import re_metadata  # noqa
 
@@ -37,3 +38,5 @@ sd = bluesky.SupplementalData()
 RE.subscribe(cat.v1.insert)
 RE.subscribe(bec)
 RE.preprocessors.append(sd)
+
+connect_scan_id_pv(RE)  # if configured

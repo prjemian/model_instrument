@@ -12,7 +12,7 @@ from .utils.best_effort import peaks  # noqa
 from .utils.catalog import cat  # noqa
 from .utils.functions import running_in_queueserver  # noqa
 from .utils.functions import subscribe_re_callbacks  # noqa
-from .utils.registry import oregistry  # noqa
+from .utils.ophyd_tools import oregistry  # noqa
 from .utils.run_engine import RE  # noqa
 from .utils.run_engine import sd  # noqa
 
