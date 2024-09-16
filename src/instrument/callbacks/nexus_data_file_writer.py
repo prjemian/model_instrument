@@ -37,7 +37,8 @@ class MyNXWriter(NXWriter):
 nxwriter = MyNXWriter()  # create the callback instance
 """The NeXus file writer object."""
 
-RE.subscribe(nxwriter.receiver)  # subscribe to the RunEngine
+if "NEXUS_DATA_FILES" in iconfig:
+    RE.subscribe(nxwriter.receiver)  # write data to NeXus files
 
 nxwriter.file_extension = iconfig.get("FILE_EXTENSION", "hdf")
 warn_missing = iconfig.get("WARN_MISSING", False)
