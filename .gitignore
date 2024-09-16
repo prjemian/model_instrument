@@ -170,3 +170,5 @@ dev_*
 qs/existing_plans_and_devices.yaml
 .vscode/
 .logs/
+*.dat
+*.hdf
