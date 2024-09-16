@@ -30,7 +30,7 @@ ipython
 ```
 
 ```py
-from instrument_template.startup import *
+from instrument.startup import *
 ```
 
 ## Jupyter notebook
@@ -40,7 +40,7 @@ Start JupyterLab, a Jupyter notebook server, or a notebook, VSCode.
 Start the data acquisition:
 
 ```py
-from instrument_template.startup import *
+from instrument.startup import *
 ```
 
 See this [example](./docs/source/demo.ipynb).

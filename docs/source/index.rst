@@ -21,6 +21,8 @@ console, a Jupyter notebook, the queueserver, or even a Python script:
    :caption: Contents:
 
    demo
+   sessions
+   install
    api
    license
 

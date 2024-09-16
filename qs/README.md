@@ -38,6 +38,6 @@ Alternatively, run the QS host's startup comand directly within the `qs/`
 subdirectory.
 
 ```bash
-cd .qs
+cd ./qs
 start-re-manager --config=./qs-config.yml
 ```

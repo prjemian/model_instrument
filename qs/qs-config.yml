@@ -21,6 +21,7 @@ operation:
     console_logging_level: NORMAL
 
     # emergency_lock_key: custom_lock_key
+
     print_console_output: true
 
     # choices: NEVER ENVIRONMENT_OPEN ALWAYS
@@ -31,9 +32,11 @@ operation:
 
 run_engine:
     # databroker_config: name_of_databroker_config_file
-    use_persistent_metadata: true
+
     # kafka_server: 127.0.0.1:9092
     # kafka_topic: custom_topic_name
+
+    use_persistent_metadata: true
     zmq_data_proxy_addr: localhost:5567
 
 startup:
