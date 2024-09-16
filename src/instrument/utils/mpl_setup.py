@@ -7,6 +7,8 @@ MatPlotLib setup.
     ~is_notebook
 """
 
+__all__ = ["is_notebook"]
+
 import logging
 
 from .functions import running_in_queueserver

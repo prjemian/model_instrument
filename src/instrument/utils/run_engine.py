@@ -10,6 +10,7 @@ Setup the Bluesky RunEngine, provides ``RE`` and ``sd``.
 import logging
 
 import bluesky
+from bluesky.utils import ProgressBarManager
 
 logger = logging.getLogger(__name__)  # noqa
 logger.info(__file__)  # noqa
@@ -40,3 +41,8 @@ RE.subscribe(bec)
 RE.preprocessors.append(sd)
 
 connect_scan_id_pv(RE)  # if configured
+
+if re_config.get("USE_PROGRESS_BAR", True):
+    # Add a progress bar.
+    pbar_manager = ProgressBarManager()
+    RE.waiting_hook = pbar_manager

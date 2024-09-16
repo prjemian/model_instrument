@@ -1,6 +1,6 @@
 """
-Utility functions, provides ``running_in_queueserver()``.
-==============================================================================
+Utility functions, provides ``running_in_queueserver()``
+========================================================
 
 .. autosummary::
 
@@ -26,7 +26,3 @@ def running_in_queueserver():
     except Exception as cause:  # noqa
         # print(f"{cause=}")
         return False
-
-
-def subscribe_re_callbacks(RE):
-    """Subscribe any callbacks to the RE, as configured."""

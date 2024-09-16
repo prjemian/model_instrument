@@ -1,17 +1,22 @@
 """
-Start Bluesky Data Acquisition sessions in script, console, notebook, & queueserver.
+Start Bluesky Data Acquisition sessions of all kinds.
+
+Includes:
+
+* Python script
+* IPython console
+* Jupyter notebook
+* Bluesky queueserver
 """
 
-import logging  # TODO: replace with custom logging configuration
+from .utils import logger  # noqa
 
-logger = logging.getLogger(__name__)  # noqa
 logger.info(__file__)  # noqa
 
 from .utils.best_effort import bec  # noqa
 from .utils.best_effort import peaks  # noqa
 from .utils.catalog import cat  # noqa
 from .utils.functions import running_in_queueserver  # noqa
-from .utils.functions import subscribe_re_callbacks  # noqa
 from .utils.ophyd_tools import oregistry  # noqa
 from .utils.run_engine import RE  # noqa
 from .utils.run_engine import sd  # noqa
@@ -32,5 +37,3 @@ else:
 
 from .callbacks import *  # noqa
 from .plans import *  # noqa
-
-subscribe_re_callbacks(RE)  # Setup RE _after_ the devices are created.

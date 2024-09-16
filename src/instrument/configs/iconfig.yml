@@ -20,6 +20,11 @@ RUN_ENGINE:
     ### Default: HOME/.config/Bluesky_RunEngine_md'
     # MD_PATH: /home/beams/USERNAME/.config/Bluesky_RunEngine_md
 
+    ### The progress bar is nice to see,
+    ### except when it clutters the output in Jupyter notebooks.
+    ### Default: True
+    USE_PROGRESS_BAR: false
+
 ### Best Effort Callback Configurations
 ### Defaults: all true (except no plots in queueserver)
 # BEC:
@@ -29,24 +34,22 @@ RUN_ENGINE:
 #     TABLE: false
 
 AREA_DETECTOR:
+    ### General configuration for area detectors.
     ALLOW_PLUGIN_WARMUP: true
     BLUESKY_FILES_ROOT: &BLUESKY_DATA_ROOT "/path/to/data/"
     IMAGE_DIR: "sub/directory/path"
     HDF5_FILE_TEMPLATE: "%s%s_%6.6d.h5"
-    # Add configuration for specific detector(s).
-    # Example:
+    ### Add configuration for specific detector(s).
+    ### Suggestion:
     # ADSIM_16M:
     #     # IOC host: workstation_name
     #     IOC_FILES_ROOT: *BLUESKY_DATA_ROOT
     #     NAME: simdet16M
     #     PV_PREFIX: "simdet16m:"
 
-### The progress bar is nice to see,
-### except when it clutters the output in Jupyter notebooks.
-USE_PROGRESS_BAR: false
-
 ### Support for known output file formats.  
 ### Uncomment to use.  If undefined, will not write that type of file.
+### Each callback should apply its configuration from here.
 # NEXUS_DATA_FILES:
 #     FILE_EXTENSION: hdf
 #     WARN_MISSING_CONTENT: true
@@ -71,8 +74,8 @@ OPHYD:
         PV_WRITE: *TIMEOUT
         PV_CONNECTION: *TIMEOUT
 
-### Uncomment any of these to override the defaults
 LOGGING:
+    ### Uncomment any of these to override the defaults
     # MAX_BYTES: 1000000
     NUMBER_OF_PREVIOUS_BACKUPS: 9
     # LOG_PATH: /tmp

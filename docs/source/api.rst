@@ -10,9 +10,12 @@ API: The Source Code
 .. autosummary::
     :nosignatures:
 
+    ~instrument.utils._logging_setup
+    ~instrument.utils.aps_dm_setup
     ~instrument.utils.best_effort
     ~instrument.utils.catalog
     ~instrument.utils.config
+    ~instrument.utils.debug_setup
     ~instrument.utils.epics_tools
     ~instrument.utils.functions
     ~instrument.utils.metadata
@@ -32,9 +35,12 @@ the bluesky queueserver.
     :linenos:
 
 .. automodule:: instrument.startup
+.. automodule:: instrument.utils._logging_setup
+.. automodule:: instrument.utils.aps_dm_setup
 .. automodule:: instrument.utils.best_effort
 .. automodule:: instrument.utils.catalog
 .. automodule:: instrument.utils.config
+.. automodule:: instrument.utils.debug_setup
 .. automodule:: instrument.utils.epics_tools
 .. automodule:: instrument.utils.functions
 .. automodule:: instrument.utils.metadata
