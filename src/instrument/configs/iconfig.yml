@@ -1,4 +1,8 @@
 # Configuration for the Bluesky instrument package.
+
+# identify the version of this iconfig.yml file
+ICONFIG_VERSION: 2.0.0
+
 # Add additional configuration for use with your instrument.
 
 ### The short name for the databroker catalog.
@@ -84,6 +88,3 @@ LOGGING:
 
 # Control detail of exception traces in IPython (console and notebook).
 XMODE_DEBUG_LEVEL: Minimal
-
-# identify the version of this iconfig.yml file
-ICONFIG_VERSION: 2.0.0
