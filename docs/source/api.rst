@@ -16,11 +16,11 @@ API: The Source Code
     ~instrument.utils.catalog
     ~instrument.utils.config
     ~instrument.utils.debug_setup
-    ~instrument.utils.epics_tools
+    ~instrument.utils.epics_setup
     ~instrument.utils.functions
     ~instrument.utils.metadata
     ~instrument.utils.mpl_setup
-    ~instrument.utils.ophyd_tools
+    ~instrument.utils.ophyd_setup
     ~instrument.utils.run_engine
     ~instrument.utils.tests.common
 
@@ -41,10 +41,10 @@ the bluesky queueserver.
 .. automodule:: instrument.utils.catalog
 .. automodule:: instrument.utils.config
 .. automodule:: instrument.utils.debug_setup
-.. automodule:: instrument.utils.epics_tools
+.. automodule:: instrument.utils.epics_setup
 .. automodule:: instrument.utils.functions
 .. automodule:: instrument.utils.metadata
 .. automodule:: instrument.utils.mpl_setup
-.. automodule:: instrument.utils.ophyd_tools
+.. automodule:: instrument.utils.ophyd_setup
 .. automodule:: instrument.utils.run_engine
 .. automodule:: instrument.utils.tests.common

@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)  # noqa
 logger.info(__file__)  # noqa
 
 from .config import iconfig  # noqa
-from .ophyd_tools import *  # noqa  Ensure oregistry & timeouts are setup first.
+from .ophyd_setup import *  # noqa  Ensure oregistry & timeouts are setup first.
 
 re_config = iconfig.get("RE", {})
 

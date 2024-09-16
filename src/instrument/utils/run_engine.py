@@ -18,7 +18,7 @@ logger.info(__file__)  # noqa
 from .best_effort import bec  # noqa
 from .catalog import cat  # noqa
 from .config import iconfig  # noqa
-from .epics_tools import connect_scan_id_pv  # noqa
+from .epics_setup import connect_scan_id_pv  # noqa
 from .metadata import MD_PATH  # noqa
 from .metadata import re_metadata  # noqa
 
