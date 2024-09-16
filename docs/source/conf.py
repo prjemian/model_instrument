@@ -12,8 +12,8 @@ project = "instrument"
 copyright = "2023-2024, APS BCDA"
 author = "APS BCDA"
 version = instrument.__version__
-release = ".".join(version.split(".")[:2])
-if len(release) < len(version):
+release = version.split("+")[0]
+if "+" in version:
     release += "+"
 
 # -- General configuration ---------------------------------------------------
