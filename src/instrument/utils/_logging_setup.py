@@ -74,6 +74,8 @@ ACTIVATE_LOGGERS = {
 
 
 logger = logging.getLogger(SESSION_NAME)
+"""Basic-level logging object"""
+
 logger.setLevel(logging.DEBUG)  # allow any log content at this level
 logger.addHandler(stream_log_handler())  # terse log to the console
 logger.addHandler(

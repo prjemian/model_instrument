@@ -9,10 +9,11 @@ EPICS-related setup
 
 import logging
 
-logger = logging.getLogger(__name__)  # noqa
-logger.info(__file__)  # noqa
+from .config import iconfig
 
-from .config import iconfig  # noqa
+logger = logging.getLogger(__name__)
+logger.info(__file__)
+
 from .ophyd_setup import *  # noqa  Ensure oregistry & timeouts are setup first.
 
 re_config = iconfig.get("RE", {})

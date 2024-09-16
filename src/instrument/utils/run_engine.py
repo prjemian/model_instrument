@@ -12,12 +12,13 @@ import logging
 import bluesky
 from bluesky.utils import ProgressBarManager
 
-logger = logging.getLogger(__name__)  # noqa
-logger.info(__file__)  # noqa
+from .config import iconfig
+
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 from .best_effort import bec  # noqa
 from .catalog import cat  # noqa
-from .config import iconfig  # noqa
 from .epics_setup import connect_scan_id_pv  # noqa
 from .metadata import MD_PATH  # noqa
 from .metadata import re_metadata  # noqa

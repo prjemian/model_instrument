@@ -28,10 +28,10 @@ import pyRestTable
 import pysumreg
 import spec2nexus
 
-logger = logging.getLogger(__name__)  # noqa
-logger.info(__file__)  # noqa
+from .config import iconfig
 
-from .config import iconfig  # noqa
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 re_config = iconfig.get("RE", {})
 

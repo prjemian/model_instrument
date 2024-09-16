@@ -10,10 +10,10 @@ import logging
 
 import databroker
 
-logger = logging.getLogger(__name__)  # noqa
-logger.info(__file__)  # noqa
+from .config import iconfig
 
-from .config import iconfig  # noqa
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 TEMPORARY_CATALOG_NAME = "temp"
 

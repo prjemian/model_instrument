@@ -14,10 +14,10 @@ import ophyd
 from ophyd.signal import EpicsSignalBase
 from ophydregistry import Registry
 
-logger = logging.getLogger(__name__)  # noqa
-logger.info(__file__)  # noqa
+from .config import iconfig
 
-from .config import iconfig  # noqa
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 DEFAULT_CONTROL_LAYER = "PyEpics"
 DEFAULT_TIMEOUT = 60  # default used next...
