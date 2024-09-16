@@ -5,8 +5,8 @@ An IPython console session provides direct interaction with the
 various parts of the bluesky (and other Python) packages and tools.
 
 Start the console session with the environment with your bluesky installation,
-including the `instrument` package you installed.  Note: Here, ``$`` is a bash
-command prompt.
+including the `instrument` package you installed.  Here, ``$`` is a bash
+command prompt.  You don't type the command prompt.
 
 .. code-block:: bash
 
@@ -52,3 +52,12 @@ Note that ``In [1]:`` and ``In [2]:`` are numbered command prompts from IPython.
     I Mon-16:55:40 - /path/to/project/src/instrument/utils/tests/common.py
 
     In [2]:
+
+Shortcut
+--------
+
+Here's a shortcut that combines both steps:
+
+    .. code-block::
+
+        ipython -i -c "from instrument.startup import *"
