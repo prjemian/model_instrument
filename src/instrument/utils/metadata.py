@@ -13,6 +13,7 @@ import logging
 import os
 import pathlib
 import socket
+import sys
 
 import apstools
 import bluesky
@@ -48,7 +49,7 @@ VERSIONS = dict(
     numpy=numpy.__version__,
     ophyd=ophyd.__version__,
     pyRestTable=pyRestTable.__version__,
-    # python=????,  # TODO:
+    python=sys.version.split(" ")[0],
     pysumreg=pysumreg.__version__,
     spec2nexus=spec2nexus.__version__,
 )
