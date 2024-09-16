@@ -48,22 +48,26 @@ BYTE = 1
 kB = 1024 * BYTE
 MB = 1024 * kB
 
+logging_setup = iconfig.get("LOGGING", {})
+
+log_path = logging_setup.get("LOG_PATH", None)
+if log_path is not None:
+    log_path= pathlib.Path(log_path)
+
 CHOICES = dict(
-    LOG_PATH=None,
-    MAX_BYTES=1 * MB,
-    NUMBER_OF_PREVIOUS_BACKUPS=9,
+    LOG_PATH=log_path,
+    MAX_BYTES=logging_setup.get("MAX_BYTES", 1 * MB),
+    NUMBER_OF_PREVIOUS_BACKUPS=logging_setup.get("NUMBER_OF_PREVIOUS_BACKUPS", 9),
 )
-CHOICES.update(iconfig.get("LOGGING", {}))
-if CHOICES["LOG_PATH"] is not None:
-    CHOICES["LOG_PATH"] = pathlib.Path(CHOICES["LOG_PATH"])
 
 # see the table above for details about this dictionary
+# TODO: Define these logger settings in the iconfig.yml file.
 ACTIVATE_LOGGERS = {
     # "bluesky": "DEBUG",
     # "bluesky.emit_document": "DEBUG",
     # "bluesky.RE.msg": "DEBUG",
     # "ophyd": "DEBUG",
-    "ophyd.control_layer": "DEBUG",
+    # "ophyd.control_layer": "WARNING",
     # "ophyd.objects": "DEBUG",
     # "databroker": "DEBUG",
 }
