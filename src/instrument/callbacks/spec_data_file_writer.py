@@ -24,8 +24,8 @@ import apstools.utils
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from ..utils.config import iconfig  # noqa
-from ..utils.run_engine import RE  # noqa
+from ..core.config import iconfig  # noqa
+from ..core.run_engine import RE  # noqa
 
 DEFAULT_FILE_EXTENSION = "dat"
 file_extension = iconfig.get("FILE_EXTENSION", DEFAULT_FILE_EXTENSION)

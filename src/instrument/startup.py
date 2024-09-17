@@ -10,18 +10,18 @@ Includes:
 """
 
 # logging setup first
-from .utils import logger
+from .core import logger
 
 logger.info(__file__)
 
 # Bluesky data acquisition setup
-from .utils.best_effort import bec  # noqa
-from .utils.best_effort import peaks  # noqa
-from .utils.catalog import cat  # noqa
-from .utils.functions import running_in_queueserver  # noqa
-from .utils.ophyd_setup import oregistry  # noqa
-from .utils.run_engine import RE  # noqa
-from .utils.run_engine import sd  # noqa
+from .core.best_effort import bec  # noqa
+from .core.best_effort import peaks  # noqa
+from .core.catalog import cat  # noqa
+from .core.functions import running_in_queueserver  # noqa
+from .core.ophyd_setup import oregistry  # noqa
+from .core.run_engine import RE  # noqa
+from .core.run_engine import sd  # noqa
 
 # Configure the session with callbacks, devices, and plans.
 # These imports must come after the above setup.
@@ -42,4 +42,4 @@ from .callbacks import *  # noqa
 from .plans import *  # noqa
 
 # TODO: Loads plans for development, remove for production.
-from .utils.tests.common import *  # noqa
+from .core.tests.common import *  # noqa

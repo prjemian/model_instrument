@@ -6,23 +6,23 @@ API: The Source Code
 
     ~instrument.startup
 
-.. rubric:: Utilities
+.. rubric:: Core
 .. autosummary::
     :nosignatures:
 
-    ~instrument.utils._logging_setup
-    ~instrument.utils.aps_dm_setup
-    ~instrument.utils.best_effort
-    ~instrument.utils.catalog
-    ~instrument.utils.config
-    ~instrument.utils.debug_setup
-    ~instrument.utils.epics_setup
-    ~instrument.utils.functions
-    ~instrument.utils.metadata
-    ~instrument.utils.mpl_setup
-    ~instrument.utils.ophyd_setup
-    ~instrument.utils.run_engine
-    ~instrument.utils.tests.common
+    ~instrument.core._logging_setup
+    ~instrument.core.aps_dm_setup
+    ~instrument.core.best_effort
+    ~instrument.core.catalog
+    ~instrument.core.config
+    ~instrument.core.debug_setup
+    ~instrument.core.epics_setup
+    ~instrument.core.functions
+    ~instrument.core.metadata
+    ~instrument.core.mpl_setup
+    ~instrument.core.ophyd_setup
+    ~instrument.core.run_engine
+    ~instrument.core.tests.common
 
 ``instrument.startup``
 -------------------------------
@@ -35,16 +35,16 @@ the bluesky queueserver.
     :linenos:
 
 .. automodule:: instrument.startup
-.. automodule:: instrument.utils._logging_setup
-.. automodule:: instrument.utils.aps_dm_setup
-.. automodule:: instrument.utils.best_effort
-.. automodule:: instrument.utils.catalog
-.. automodule:: instrument.utils.config
-.. automodule:: instrument.utils.debug_setup
-.. automodule:: instrument.utils.epics_setup
-.. automodule:: instrument.utils.functions
-.. automodule:: instrument.utils.metadata
-.. automodule:: instrument.utils.mpl_setup
-.. automodule:: instrument.utils.ophyd_setup
-.. automodule:: instrument.utils.run_engine
-.. automodule:: instrument.utils.tests.common
+.. automodule:: instrument.core._logging_setup
+.. automodule:: instrument.core.aps_dm_setup
+.. automodule:: instrument.core.best_effort
+.. automodule:: instrument.core.catalog
+.. automodule:: instrument.core.config
+.. automodule:: instrument.core.debug_setup
+.. automodule:: instrument.core.epics_setup
+.. automodule:: instrument.core.functions
+.. automodule:: instrument.core.metadata
+.. automodule:: instrument.core.mpl_setup
+.. automodule:: instrument.core.ophyd_setup
+.. automodule:: instrument.core.run_engine
+.. automodule:: instrument.core.tests.common

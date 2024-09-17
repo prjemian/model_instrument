@@ -9,9 +9,9 @@ import logging
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from ..utils.config import iconfig  # noqa
-from ..utils.functions import host_on_aps_subnet  # noqa
-from ..utils.run_engine import RE  # noqa
+from ..core.config import iconfig  # noqa
+from ..core.functions import host_on_aps_subnet  # noqa
+from ..core.run_engine import RE  # noqa
 
 if host_on_aps_subnet():
     from apstools.callbacks import NXWriterAPS as NXWriter

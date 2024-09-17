@@ -31,25 +31,25 @@ Note that ``In [1]:`` and ``In [2]:`` are numbered command prompts from IPython.
     I Mon-16:55:40 - ############################################################ startup
     I Mon-16:55:40 - logging started
     I Mon-16:55:40 - logging level = 10
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/_logging_setup.py
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/aps_dm_setup.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/_logging_setup.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/aps_dm_setup.py
     W Mon-16:55:40 - APS DM setup file does not exist: '/home/dm/etc/dm.setup.sh'
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/debug_setup.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/debug_setup.py
     Exception reporting mode: Minimal
     I Mon-16:55:40 - xmode exception level: 'Minimal'
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/functions.py
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/mpl_setup.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/functions.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/mpl_setup.py
     I Mon-16:55:40 - /path/to/project/src/instrument/startup.py
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/best_effort.py
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/catalog.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/best_effort.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/catalog.py
     I Mon-16:55:40 - Databroker catalog: temp
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/ophyd_setup.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/ophyd_setup.py
     I Mon-16:55:40 - using ophyd control layer: 'pyepics'
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/run_engine.py
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/epics_setup.py
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/metadata.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/run_engine.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/epics_setup.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/metadata.py
     I Mon-16:55:40 - RunEngine metadata saved in directory: /home/user/.config/Bluesky_RunEngine_md
-    I Mon-16:55:40 - /path/to/project/src/instrument/utils/tests/common.py
+    I Mon-16:55:40 - /path/to/project/src/instrument/core/tests/common.py
 
     In [2]:
 
