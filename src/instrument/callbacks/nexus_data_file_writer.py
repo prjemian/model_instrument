@@ -9,7 +9,7 @@ import logging
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from ..core.config import iconfig  # noqa
+from ..configs.config import iconfig  # noqa
 from ..core.functions import host_on_aps_subnet  # noqa
 from ..core.run_engine import RE  # noqa
 

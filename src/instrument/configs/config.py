@@ -1,30 +1,10 @@
 """
-Read YAML configuration files, such as 'iconfig.yml'.
-=====================================================
+Load configuration files, such as 'iconfig.yml'.
+================================================
 
 .. autosummary::
     ~load_config_yaml
     ~IConfigFileVersionError
-
-Examples from the ``iconfig.yml`` configuration file:
-
-
-.. code-block:: yaml
-
-    # simple and nested key:value pairs
-
-    DATABROKER_CATALOG: temp
-    ICONFIG_VERSION: 2.0.0
-    RUN_ENGINE:
-        DEFAULT_METADATA:
-            beamline_id: instrument
-            databroker_catalog: temp
-            instrument_name: Most Glorious Scientific Instrument
-            proposal_id: commissioning
-    SPEC_DATA_FILES:
-        FILE_EXTENSION: dat
-    USE_PROGRESS_BAR: false
-    XMODE_DEBUG_LEVEL: Minimal
 """
 
 __all__ = [

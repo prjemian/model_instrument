@@ -14,7 +14,6 @@ created)
     ~instrument.core.aps_dm_setup
     ~instrument.core.best_effort
     ~instrument.core.catalog
-    ~instrument.core.config
     ~instrument.core.debug_setup
     ~instrument.core.epics_setup
     ~instrument.core.functions
@@ -28,7 +27,6 @@ created)
 .. automodule:: instrument.core.aps_dm_setup
 .. automodule:: instrument.core.best_effort
 .. automodule:: instrument.core.catalog
-.. automodule:: instrument.core.config
 .. automodule:: instrument.core.debug_setup
 .. automodule:: instrument.core.epics_setup
 .. automodule:: instrument.core.functions

@@ -9,7 +9,7 @@ import logging
 
 from IPython import get_ipython
 
-from .config import iconfig
+from ..configs.config import iconfig
 
 logger = logging.getLogger(__name__)
 logger.info(__file__)

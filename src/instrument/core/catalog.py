@@ -10,7 +10,7 @@ import logging
 
 import databroker
 
-from .config import iconfig
+from ..configs.config import iconfig
 
 logger = logging.getLogger(__name__)
 logger.info(__file__)
