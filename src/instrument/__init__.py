@@ -1,6 +1,6 @@
 # -*- coding: iso-8859-1 -*-
 
-"""instrument: Bluesky Data Acquisition in console, notebook, & queueserver."""
+"""Model Bluesky Data Acquisition Instrument."""
 
 __package__ = "instrument"
 

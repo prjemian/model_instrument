@@ -1,7 +1,7 @@
 instrument (|release|)
 ======================
 
-Bluesky Data Acquisition in console, notebook, & queueserver.
+Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserver.
 
 Start the data collection session with the same command, whether in the IPython
 console, a Jupyter notebook, the queueserver, or even a Python script:
@@ -29,9 +29,9 @@ console, a Jupyter notebook, the queueserver, or even a Python script:
 About ...
 -----------
 
-:home: https://prjemian.github.io/instrument_template/
-:bug tracker: https://github.com/prjemian/instrument_template/issues
-:source: https://github.com/prjemian/instrument_template
+:home: https://prjemian.github.io/model_instrument/
+:bug tracker: https://github.com/prjemian/model_instrument/issues
+:source: https://github.com/prjemian/model_instrument
 :license: :ref:`license`
 :full version: |version|
 :published: |today|

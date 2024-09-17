@@ -1,6 +1,6 @@
-# instrument_template
+# model_instrument
 
-Bluesky Data Acquisition in console, notebook, & queueserver.
+Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserver.
 
 ## Demo
 
@@ -18,8 +18,8 @@ RE(sim_rel_scan_plan())
 Set up the development environment.
 
 ```bash
-conda create -y -n instrument_template python pyqt=5
-conda activate instrument_template
+conda create -y -n model_instrument python pyqt=5
+conda activate model_instrument
 pip install -e .[all]
 ```
 

@@ -8,7 +8,7 @@ copyright = "2014-2024, Pete R. Jemian"
 [project]
 name = "instrument"
 dynamic = ["version"]
-description = "instrument: Bluesky Data Acquisition in console, notebook, & queueserver."
+description = "Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserver."
 authors = [
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
 ]
@@ -67,8 +67,8 @@ doc = [
 all = ["instrument[dev,doc]"]
 
 [project.urls]
-"Homepage" = "https://prjemian.github.io/instrument_template/"
-"Bug Tracker" = "https://github.com/prjemian/instrument_template/issues"
+"Homepage" = "https://prjemian.github.io/model_instrument/"
+"Bug Tracker" = "https://github.com/prjemian/model_instrument/issues"
 
 # [project.scripts]
 # instrument = "instrument.app:main"
