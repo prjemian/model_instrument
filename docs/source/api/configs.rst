@@ -1,7 +1,7 @@
-.. _configs:
+.. _api.configs:
 
-Configs
-=======
+``instrument.configs``
+======================
 
 Configuration files related to this Bluesky instrument package.
 

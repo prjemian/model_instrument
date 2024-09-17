@@ -3,31 +3,40 @@
 API: The Source Code
 ====================
 
-.. autosummary::
-    :nosignatures:
+The instrument model is described by this directory structure:
 
-    ~instrument.startup
+.. code-block:: text
+    :linenos:
+
+    docs/source         sphinx documentation source
+    pyproject.toml      project configuration
+    qs/                 files for running a queueserver host process
+    src/                Python source code tree
+        instrument/     root of the 'instrument' package
+            startup.py  Python code to setup a session for Bluesky data acquisition
+            callbacks/  receive and handle info from other code
+            configs/    configuration files
+            core/       create core components of Bluesky data acquisition
+            devices/    your instrument's controls
+            plans/      your instrument's measurement procedures
+            utils/      any other code for your instrument
+
+A Bluesky data acquisition session :ref:`begins with <api.startup>`:
+
+.. code-block:: py
+
+    from instrument.startup import *
+
+The ``instrument/`` directory is described in the following sections.
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
+   startup
    callbacks
    configs
    core
    devices
    plans
    utils
-
-``instrument.startup``
--------------------------------
-
-This same code can be used with IPython console & Jupyter notebook sessions and
-the bluesky queueserver.  Use this inspiration to build your own custom startup
-procedures.
-
-.. literalinclude:: ../../../src/instrument/startup.py
-    :language: python
-    :linenos:
-
-.. automodule:: instrument.startup

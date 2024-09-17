@@ -1,7 +1,7 @@
-.. _utils:
+.. _api.utils:
 
-Utils
-=====
+``instrument.utils``
+====================
 
 Add Python modules here that provide any other code not covered by callbacks,
 configs, core, devices, or plans.

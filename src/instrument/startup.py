@@ -26,19 +26,20 @@ from .core.run_engine import sd  # noqa
 # Configure the session with callbacks, devices, and plans.
 # These imports must come after the above setup.
 if running_in_queueserver():
+    ### To make the standard plans available in QS, import by '*'.
     from apstools.plans import lineup2  # noqa
     from bluesky.plans import *  # noqa
+
 else:
+    # Import bluesky plans and stubs with prefixes set by common conventions.
+    # The apstools plans and utils are imported by '*'.
     from apstools.plans import *  # noqa
     from apstools.utils import *  # noqa
     from bluesky import plan_stubs as bps  # noqa
     from bluesky import plans as bp  # noqa
 
-    # Sessions in the queueserver do not need the devices & signals.
-    # Their plans can find the devices & signals they need in the oregistry.
-    from .devices import *  # noqa
-
 from .callbacks import *  # noqa
+from .devices import *  # noqa
 from .plans import *  # noqa
 
 # TODO: Loads plans for development, remove for production.

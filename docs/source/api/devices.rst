@@ -1,6 +1,6 @@
-.. _devices:
+.. _api.devices:
 
-Devices
-=======
+``instrument.devices``
+======================
 
 Add Python modules here that describe your instrument's controls.

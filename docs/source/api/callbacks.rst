@@ -1,7 +1,7 @@
-.. _callbacks:
+.. _api.callbacks:
 
-Callbacks
-=========
+``instrument.callbacks``
+========================
 
 Add Python modules here that receive and handle information from other Bluesky
 controls.

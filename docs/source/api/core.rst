@@ -1,7 +1,11 @@
-.. _core:
+.. _api.core:
 
-Core
-====
+``instrument.core``
+===================
+
+Create the core components of Bluesky data acquisition, in the order required by
+their function. (e.g., timeout defaults must be set before any ophyd objects are
+created)
 
 .. autosummary::
     :nosignatures:
