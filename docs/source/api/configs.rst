@@ -8,10 +8,10 @@ Configuration files related to this Bluesky instrument package.
 .. autosummary::
     :nosignatures:
 
-    ~instrument.configs.config
+    ~instrument.configs.loaders
 
 
-.. automodule:: instrument.configs.config
+.. automodule:: instrument.configs.loaders
 
 .. rubric:: file: ``iconfig.yml``
 .. literalinclude:: ../../../src/instrument/configs/iconfig.yml

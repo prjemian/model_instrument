@@ -14,7 +14,7 @@ from bluesky.callbacks.best_effort import BestEffortCallback
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from ..configs.config import iconfig  # noqa
+from ..configs.loaders import iconfig  # noqa
 from .functions import running_in_queueserver  # noqa
 
 bec = BestEffortCallback()

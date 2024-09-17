@@ -7,8 +7,8 @@ The bluesky queueserver [#]_ manages sequencing and execution of Bluesky plans.
 It has a host process that manages a RunEngine. Client sessions will interact
 with that host process.  See :ref:`qs.host.configure` for more details.
 
-The queueserver requires a ``redis`` service [#]_ to be running.  File
-``qs/qs-config.yml`` has settings to connect with and use the ``redis`` server.
+.. important:: The queueserver requires a ``redis`` service [#]_ to be running.
+    File ``qs/qs-config.yml`` has settings to specify the ``redis`` service.
 
 .. [#] https://blueskyproject.io/bluesky-queueserver/
 .. [#] https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/

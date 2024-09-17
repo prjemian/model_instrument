@@ -1,6 +1,6 @@
 """RunEngine callbacks, mostly."""
 
-from ..configs.config import iconfig
+from ..configs.loaders import iconfig
 
 if iconfig.get("NEXUS_DATA_FILES") is not None:
     from .nexus_data_file_writer import *  # noqa
