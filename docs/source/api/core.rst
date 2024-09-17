@@ -1,12 +1,8 @@
-API: The Source Code
-====================
+.. _core:
 
-.. autosummary::
-    :nosignatures:
+Core
+====
 
-    ~instrument.startup
-
-.. rubric:: Core
 .. autosummary::
     :nosignatures:
 
@@ -24,17 +20,6 @@ API: The Source Code
     ~instrument.core.run_engine
     ~instrument.core.tests.common
 
-``instrument.startup``
--------------------------------
-
-This same code can be used with IPython console & Jupyter notebook sessions and
-the bluesky queueserver.
-
-.. literalinclude:: ../../src/instrument/startup.py
-    :language: python
-    :linenos:
-
-.. automodule:: instrument.startup
 .. automodule:: instrument.core._logging_setup
 .. automodule:: instrument.core.aps_dm_setup
 .. automodule:: instrument.core.best_effort
