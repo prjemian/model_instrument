@@ -3,11 +3,8 @@ MatPlotLib setup.
 =================
 
 .. autosummary::
-
     ~is_notebook
 """
-
-__all__ = ["is_notebook"]
 
 import logging
 
@@ -38,8 +35,9 @@ def is_notebook():
         return False  # Probably standard Python interpreter
 
 
-if not running_in_queueserver():
-    import matplotlib.pyplot as plt
+def mpl_setup_2():
+    if not running_in_queueserver():
+        import matplotlib.pyplot as plt
 
-    if not is_notebook():
-        plt.ion()
+        if not is_notebook():
+            plt.ion()

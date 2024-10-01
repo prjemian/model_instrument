@@ -20,10 +20,18 @@ from .core.best_effort import peaks  # noqa
 from .core.catalog import cat  # noqa
 from .core.functions import running_in_queueserver  # noqa
 from .core.ophyd_setup import oregistry  # noqa
-from .core.run_engine import RE  # noqa
-from .core.run_engine import sd  # noqa
+from .core.run_engine import RE  # noqa: E402
+from .core.run_engine import sd  # noqa: E402
+from .configs.loaders import iconfig  # noqa: E402
+
 
 # Configure the session with callbacks, devices, and plans.
+if iconfig.get("NEXUS_DATA_FILES") is not None:
+    from .callbacks.nexus_data_file_writer import nxwriter  # noqa
+
+if iconfig.get("SPEC_DATA_FILES") is not None:
+    from .callbacks.spec_data_file_writer import specwriter, spec_comment, newSpecFile
+
 # These imports must come after the above setup.
 if running_in_queueserver():
     ### To make the standard plans available in QS, import by '*'.
@@ -38,9 +46,8 @@ else:
     from bluesky import plan_stubs as bps  # noqa
     from bluesky import plans as bp  # noqa
 
-from .callbacks import *  # noqa
 from .devices import *  # noqa
 from .plans import *  # noqa
 
 # TODO: Loads plans for development, remove for production.
-from .core.tests.common import *  # noqa
+from .tests.common import *  # noqa

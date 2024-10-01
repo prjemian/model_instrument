@@ -8,10 +8,7 @@ Utility functions
     ~running_in_queueserver
 """
 
-__all__ = """
-    host_on_aps_subnet
-    running_in_queueserver
-""".split()
+#TODO: Rename file
 
 import logging
 import socket
