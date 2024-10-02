@@ -24,7 +24,6 @@ from .core.run_engine import RE  # noqa: E402
 from .core.run_engine import sd  # noqa: E402
 from .configs.loaders import iconfig  # noqa: E402
 
-
 # Configure the session with callbacks, devices, and plans.
 if iconfig.get("NEXUS_DATA_FILES") is not None:
     from .callbacks.nexus_data_file_writer import nxwriter  # noqa

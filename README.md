@@ -70,3 +70,6 @@ use this one.
 ```bash
 queue-monitor &
 ```
+# Configuration files
+
+- `iconfig.yml` - configuration for data collection

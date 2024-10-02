@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 logger.info(__file__)
 
 from ..configs.loaders import iconfig  # noqa
-from ..core.functions import host_on_aps_subnet  # noqa
+from ..utils.helper import host_on_aps_subnet  # noqa
 from ..core.run_engine import RE  # noqa
 
 if host_on_aps_subnet():
