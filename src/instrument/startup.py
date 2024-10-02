@@ -32,12 +32,10 @@ from .utils.helper import running_in_queueserver
 if iconfig.get("NEXUS_DATA_FILES") is not None:
     from .callbacks.nexus_data_file_writer import nxwriter  # noqa
 
-# TODO: Something about spec is breaking the package
-
-# if iconfig.get("SPEC_DATA_FILES") is not None:
-#     from .callbacks.spec_data_file_writer import newSpecFile
-#     from .callbacks.spec_data_file_writer import spec_comment
-#     from .callbacks.spec_data_file_writer import specwriter
+if iconfig.get("SPEC_DATA_FILES") is not None:
+    from .callbacks.spec_data_file_writer import newSpecFile  # noqa
+    from .callbacks.spec_data_file_writer import spec_comment  # noqa
+    from .callbacks.spec_data_file_writer import specwriter  # noqa
 
 # These imports must come after the above setup.
 if running_in_queueserver():

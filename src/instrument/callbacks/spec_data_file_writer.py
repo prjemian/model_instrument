@@ -73,17 +73,18 @@ specwriter = _specwriter
 """The SPEC file writer object."""
 
 # make the SPEC file in current working directory (assumes is writable)
-_path = pathlib.Path().cwd()
-specwriter.newfile(_path / specwriter.spec_filename)
+specwriter.newfile(specwriter.spec_filename)
 
 if "SPEC_DATA_FILES" in iconfig:
     RE.subscribe(specwriter.receiver)  # write data to SPEC files
+    logger.info("SPEC data file: %s", specwriter.spec_filename.resolve())
 
 try:
     # feature new in apstools 1.6.14
     from apstools.plans import label_stream_wrapper
 
     def motor_start_preprocessor(plan):
+        """Record motor positions at start of each run."""
         return label_stream_wrapper(plan, "motor", when="start")
 
     RE.preprocessors.append(motor_start_preprocessor)
