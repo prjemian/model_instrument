@@ -7,7 +7,6 @@ Setup the Bluesky RunEngine, provides ``RE`` and ``sd``.
     ~sd
 """
 
-# TODO: remove noqa e:402
 import logging
 
 import bluesky
