@@ -20,13 +20,13 @@ logger = logging.getLogger(__name__)
 logger.info(__file__)
 
 # Bluesky data acquisition setup
-from .core.best_effort import bec  # noqa
-from .core.best_effort import peaks  # noqa
-from .core.catalog import cat  # noqa
-from .utils.helper import running_in_queueserver  # noqa
-from .core.run_engine import RE  # noqa
-from .core.run_engine import sd  # noqa
-from .configs.loaders import iconfig  # noqa
+from .configs.loaders import iconfig
+from .core.best_effort import bec  # noqa: F401
+from .core.best_effort import peaks  # noqa: F401
+from .core.catalog import cat  # noqa: F401
+from .core.run_engine import RE  # noqa: F401
+from .core.run_engine import sd  # noqa: F401
+from .utils.helper import running_in_queueserver
 
 # Configure the session with callbacks, devices, and plans.
 if iconfig.get("NEXUS_DATA_FILES") is not None:

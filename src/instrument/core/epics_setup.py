@@ -6,7 +6,8 @@ EPICS-related setup
     ~epics_scan_id_source
     ~connect_scan_id_pv
 """
-#TODO: Merge epic setup and ophyd setup
+
+# TODO: Merge epic setup and ophyd setup
 import logging
 
 from ..configs.loaders import iconfig

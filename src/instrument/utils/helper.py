@@ -18,6 +18,7 @@ from ..configs.loaders import iconfig
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
+
 def running_in_queueserver():
     """Detect if running in the bluesky queueserver."""
     try:
@@ -30,7 +31,7 @@ def running_in_queueserver():
 
 
 def debug_python():
-    ''''''
+    """"""
     # terse error dumps (Exception tracebacks)
     _ip = get_ipython()
     if _ip is not None:
@@ -46,16 +47,12 @@ def is_notebook():
     see: https://stackoverflow.com/a/39662359/1046449
     """
     try:
-
         shell = get_ipython().__class__.__name__
         if shell == "ZMQInteractiveShell":
-            print("jupy\n\n\n")
             return True  # Jupyter notebook or qtconsole
         elif shell == "TerminalInteractiveShell":
-            print("ipython\n\n\n")
             return False  # Terminal running IPython
         else:
-            print("3rd case\n\n\n")
             return False  # Other type (?)
 
     except NameError:
@@ -67,9 +64,7 @@ def mpl_setup():
     MatPlotLib setup.
     """
     if not running_in_queueserver():
-        print("test \n\n\n")
         import matplotlib.pyplot as plt
 
         if not is_notebook():
-            print("is not notebook\n\n\n")
             plt.ion()

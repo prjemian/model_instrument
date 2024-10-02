@@ -28,7 +28,6 @@ References:
 * https://blueskyproject.io/bluesky/debugging.html#logger-names
 """
 
-
 import logging
 import pathlib
 
@@ -40,9 +39,9 @@ from ..configs.loaders import iconfig
 
 
 def configure_logging():
-    '''
+    """
     configure logging setup to be used with instrument package
-    '''
+    """
     SESSION_NAME = "bluesky-session"
     IPYTHON_LOGGER = "ipython_logger"
 
@@ -74,7 +73,6 @@ def configure_logging():
         # "databroker": "DEBUG",
     }
 
-
     logger = logging.getLogger(SESSION_NAME)
     """Basic-level logging object"""
 
@@ -99,7 +97,6 @@ def configure_logging():
     _l.setLevel("DEBUG")
     _l.addHandler(stream_log_handler())  # terse log to the console
     _l.info(__file__)
-
 
     for logger_name, level in ACTIVATE_LOGGERS.items():
         _l = logging.getLogger(logger_name)

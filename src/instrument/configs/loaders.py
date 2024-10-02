@@ -20,6 +20,7 @@ instrument_path = pathlib.Path(__file__).parent.parent
 DEFAULT_ICONFIG_YML_FILE = instrument_path / "configs" / "iconfig.yml"
 ICONFIG_MINIMUM_VERSION = "2.0.0"
 
+
 def load_config_yaml(iconfig_yml=None) -> dict:
     """
     Load iconfig.yml (and other YAML) configuration files.
