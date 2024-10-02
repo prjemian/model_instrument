@@ -18,6 +18,8 @@ else:
 
 
 class MyNXWriter(NXWriter):
+    """Patched NXWriter."""
+
     def get_sample_title(self):
         """
         Get the title from the metadata or modify the default.
