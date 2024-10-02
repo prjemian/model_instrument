@@ -26,7 +26,7 @@ from .core.best_effort import peaks  # noqa: F401
 from .core.catalog import cat  # noqa: F401
 from .core.run_engine import RE  # noqa: F401
 from .core.run_engine import sd  # noqa: F401
-from .utils.helper import running_in_queueserver
+from .utils.helper_functions import running_in_queueserver
 
 # Configure the session with callbacks, devices, and plans.
 if iconfig.get("NEXUS_DATA_FILES") is not None:
