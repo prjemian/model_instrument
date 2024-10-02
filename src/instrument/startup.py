@@ -24,20 +24,18 @@ from .core.best_effort import bec  # noqa
 from .core.best_effort import peaks  # noqa
 from .core.catalog import cat  # noqa
 from .utils.helper import running_in_queueserver  # noqa
-from .core.run_engine import RE  # noqa: E402
-from .core.run_engine import sd  # noqa: E402
-from .configs.loaders import iconfig  # noqa: E402
+from .core.run_engine import RE  # noqa
+from .core.run_engine import sd  # noqa
+from .configs.loaders import iconfig  # noqa
 
 # Configure the session with callbacks, devices, and plans.
 if iconfig.get("NEXUS_DATA_FILES") is not None:
     from .callbacks.nexus_data_file_writer import nxwriter  # noqa
 
-#TODO: Something about spec is breaking the package
-
-# if iconfig.get("SPEC_DATA_FILES") is not None:
-#     from .callbacks.spec_data_file_writer import newSpecFile
-#     from .callbacks.spec_data_file_writer import spec_comment
-#     from .callbacks.spec_data_file_writer import specwriter
+if iconfig.get("SPEC_DATA_FILES") is not None:
+    from .callbacks.spec_data_file_writer import newSpecFile  # noqa
+    from .callbacks.spec_data_file_writer import spec_comment  # noqa
+    from .callbacks.spec_data_file_writer import specwriter  # noqa
 
 # These imports must come after the above setup.
 if running_in_queueserver():
