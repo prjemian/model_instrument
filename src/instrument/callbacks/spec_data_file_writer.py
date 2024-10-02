@@ -8,11 +8,6 @@ custom callbacks
     ~specwriter
 """
 
-__all__ = """
-    newSpecFile
-    spec_comment
-    specwriter
-""".split()
 # TODO: Review logic
 import datetime
 import logging

@@ -10,8 +10,13 @@ Includes:
 """
 
 # logging setup first
-from .core import logger
+import logging
 
+from .utils._logging_setup import configure_logging
+
+configure_logging()
+
+logger = logging.getLogger(__name__)
 logger.info(__file__)
 
 # Bluesky data acquisition setup
@@ -19,7 +24,6 @@ from .core.best_effort import bec  # noqa
 from .core.best_effort import peaks  # noqa
 from .core.catalog import cat  # noqa
 from .utils.helper import running_in_queueserver  # noqa
-from .utils.ophyd_setup import oregistry  # noqa #TODO: Delete?
 from .core.run_engine import RE  # noqa: E402
 from .core.run_engine import sd  # noqa: E402
 from .configs.loaders import iconfig  # noqa: E402
@@ -28,8 +32,12 @@ from .configs.loaders import iconfig  # noqa: E402
 if iconfig.get("NEXUS_DATA_FILES") is not None:
     from .callbacks.nexus_data_file_writer import nxwriter  # noqa
 
-if iconfig.get("SPEC_DATA_FILES") is not None:
-    from .callbacks.spec_data_file_writer import specwriter, spec_comment, newSpecFile
+#TODO: Something about spec is breaking the package
+
+# if iconfig.get("SPEC_DATA_FILES") is not None:
+#     from .callbacks.spec_data_file_writer import newSpecFile
+#     from .callbacks.spec_data_file_writer import spec_comment
+#     from .callbacks.spec_data_file_writer import specwriter
 
 # These imports must come after the above setup.
 if running_in_queueserver():
@@ -44,6 +52,7 @@ else:
     from apstools.utils import *  # noqa
     from bluesky import plan_stubs as bps  # noqa
     from bluesky import plans as bp  # noqa
+    from .utils.ophyd_setup import oregistry  # noqa
 
 from .devices import *  # noqa
 from .plans import *  # noqa

@@ -8,12 +8,6 @@ For development and testing only, provides plans.
     ~sim_rel_scan_plan
 """
 
-__all__ = """
-    sim_count_plan
-    sim_print_plan
-    sim_rel_scan_plan
-""".split()
-
 import logging
 
 from bluesky import plan_stubs as bps

@@ -2,8 +2,6 @@
 Write scan(s) to a NeXus/HDF5 file.
 """
 
-__all__ = ["nxwriter"]
-
 import logging
 
 logger = logging.getLogger(__name__)

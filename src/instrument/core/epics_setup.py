@@ -6,7 +6,7 @@ EPICS-related setup
     ~epics_scan_id_source
     ~connect_scan_id_pv
 """
-
+#TODO: Merge epic setup and ophyd setup
 import logging
 
 from ..configs.loaders import iconfig
@@ -20,7 +20,7 @@ logger.info(__file__)
 set_control_layer()
 set_timeouts()  # MUST happen before ANY EpicsSignalBase (or subclass) is created.
 
-re_config = iconfig.get("RE", {})
+re_config = iconfig.get("RUN_ENGINE", {})
 
 
 def epics_scan_id_source(scan_id_epics, _md):
