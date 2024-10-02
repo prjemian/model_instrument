@@ -23,7 +23,7 @@ from .epics_setup import connect_scan_id_pv  # noqa
 from .metadata import MD_PATH  # noqa
 from .metadata import re_metadata  # noqa
 
-re_config = iconfig.get("RE", {})
+re_config = iconfig.get("RE", {}) #TODO: What is this?
 
 RE = bluesky.RunEngine()
 """The bluesky RunEngine object."""

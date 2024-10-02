@@ -10,11 +10,12 @@ EPICS-related setup
 import logging
 
 from ..configs.loaders import iconfig
+from ..utils.ophyd_setup import set_control_layer
+from ..utils.ophyd_setup import set_timeouts
 
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from .ophyd_setup import set_control_layer, set_timeouts  # noqa  Ensure oregistry & timeouts are setup first.
 
 set_control_layer()
 set_timeouts()  # MUST happen before ANY EpicsSignalBase (or subclass) is created.

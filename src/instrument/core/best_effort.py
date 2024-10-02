@@ -12,7 +12,7 @@ import logging
 from bluesky.callbacks.best_effort import BestEffortCallback
 
 from ..configs.loaders import iconfig
-from .functions import running_in_queueserver
+from ..utils.helper import running_in_queueserver
 
 logger = logging.getLogger(__name__)
 logger.info(__file__)

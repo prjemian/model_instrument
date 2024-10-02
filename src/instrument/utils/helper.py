@@ -63,7 +63,6 @@ def is_notebook():
 def mpl_setup():
     """
     MatPlotLib setup.
-
     """
     if not running_in_queueserver():
         import matplotlib.pyplot as plt

@@ -1,1 +1,1 @@
-"""Test code for the utilities."""
+"""Test code for minimal instrument package."""

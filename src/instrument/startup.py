@@ -18,8 +18,8 @@ logger.info(__file__)
 from .core.best_effort import bec  # noqa
 from .core.best_effort import peaks  # noqa
 from .core.catalog import cat  # noqa
-from .core.functions import running_in_queueserver  # noqa
-from .core.ophyd_setup import oregistry  # noqa
+from .utils.helper import running_in_queueserver  # noqa
+from .utils.ophyd_setup import oregistry  # noqa #TODO: Delete?
 from .core.run_engine import RE  # noqa: E402
 from .core.run_engine import sd  # noqa: E402
 from .configs.loaders import iconfig  # noqa: E402
