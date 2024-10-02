@@ -6,7 +6,8 @@ Setup the Bluesky RunEngine, provides ``RE`` and ``sd``.
     ~RE
     ~sd
 """
-#TODO: remove noqa e:402
+
+# TODO: remove noqa e:402
 import logging
 
 import bluesky
@@ -17,11 +18,11 @@ from ..configs.loaders import iconfig
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from .best_effort import bec  # noqa
-from .catalog import cat  # noqa
-from .epics_setup import connect_scan_id_pv  # noqa
-from .metadata import MD_PATH  # noqa
-from .metadata import re_metadata  # noqa
+from .best_effort import bec
+from .catalog import cat
+from .epics_setup import connect_scan_id_pv
+from .metadata import MD_PATH
+from .metadata import re_metadata
 
 re_config = iconfig.get("RUN_ENGINE", {})
 

@@ -5,6 +5,7 @@ Databroker catalog, provides ``cat``.
 .. autosummary::
     ~cat
 """
+
 import logging
 
 import databroker

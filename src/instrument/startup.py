@@ -24,8 +24,8 @@ from .core.best_effort import bec  # noqa
 from .core.best_effort import peaks  # noqa
 from .core.catalog import cat  # noqa
 from .utils.helper import running_in_queueserver  # noqa
-from .core.run_engine import RE  # noqa: E402
-from .core.run_engine import sd  # noqa: E402
+from .core.run_engine import RE  # noqa
+from .core.run_engine import sd  # noqa
 from .configs.loaders import iconfig  # noqa: E402
 
 # Configure the session with callbacks, devices, and plans.

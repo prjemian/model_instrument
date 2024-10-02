@@ -16,8 +16,9 @@ import socket
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
+
 def aps_dm_setup(dm_setup_file):
-    '''
+    """
     APS Data Management setup
     =========================
 
@@ -28,7 +29,7 @@ def aps_dm_setup(dm_setup_file):
 
     This setup must be done before any of the DM package libraries are called.
 
-    '''
+    """
     if dm_setup_file is not None:
         bash_script = pathlib.Path(dm_setup_file)
         if bash_script.exists():
@@ -46,6 +47,7 @@ def aps_dm_setup(dm_setup_file):
             logger.info("APS DM workflow owner: %s", workflow_owner)
         else:
             logger.warning("APS DM setup file does not exist: '%s'", bash_script)
+
 
 def host_on_aps_subnet():
     """Detect if this host is on an APS subnet."""
