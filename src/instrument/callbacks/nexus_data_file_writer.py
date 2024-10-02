@@ -18,7 +18,7 @@ else:
 
 
 class MyNXWriter(NXWriter):
-    """Patched NXWriter."""
+    """Patch to get sample title from metadata, if available."""
 
     def get_sample_title(self):
         """
