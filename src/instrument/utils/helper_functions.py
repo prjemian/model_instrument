@@ -6,6 +6,9 @@ Generic utility helper functions
 
     ~host_on_aps_subnet
     ~running_in_queueserver
+    ~debug_python
+    ~mpl_setup
+    ~is_notebook
 """
 
 import logging

@@ -5,7 +5,7 @@ APS utility helper functions
 .. autosummary::
 
     ~host_on_aps_subnet
-    ~running_in_queueserver
+    ~aps_dm_setup
 """
 
 import logging
