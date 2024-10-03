@@ -20,8 +20,8 @@ logger.info(__file__)
 from .best_effort import bec
 from .catalog import cat
 from .epics_setup import connect_scan_id_pv
-from .metadata import MD_PATH
-from .metadata import re_metadata
+from ..utils.metadata import MD_PATH
+from ..utils.metadata import re_metadata
 
 re_config = iconfig.get("RUN_ENGINE", {})
 
