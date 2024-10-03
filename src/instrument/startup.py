@@ -50,7 +50,7 @@ else:
     from apstools.utils import *  # noqa
     from bluesky import plan_stubs as bps  # noqa
     from bluesky import plans as bp  # noqa
-    from .utils.ophyd_setup import oregistry  # noqa
+    from .utils.controls_setup import oregistry  # noqa
 
 from .devices import *  # noqa
 from .plans import *  # noqa
