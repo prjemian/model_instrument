@@ -8,7 +8,6 @@ custom callbacks
     ~specwriter
 """
 
-# TODO: Review logic
 import datetime
 import logging
 import pathlib
