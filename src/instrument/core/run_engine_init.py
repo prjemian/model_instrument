@@ -22,8 +22,8 @@ from ..utils.controls_setup import set_control_layer
 from ..utils.controls_setup import set_timeouts
 from ..utils.metadata import MD_PATH
 from ..utils.metadata import re_metadata
-from .best_effort import bec
-from .catalog import cat
+from .best_effort_init import bec
+from .catalog_init import cat
 
 re_config = iconfig.get("RUN_ENGINE", {})
 

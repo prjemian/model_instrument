@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 logger.info(__file__)
 
 from ..configs.loaders import iconfig  # noqa
-from ..core.run_engine import RE  # noqa
+from ..core.run_engine_init import RE  # noqa
 
 DEFAULT_FILE_EXTENSION = "dat"
 file_extension = iconfig.get("FILE_EXTENSION", DEFAULT_FILE_EXTENSION)
