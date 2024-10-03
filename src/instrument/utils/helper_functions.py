@@ -25,8 +25,8 @@ def running_in_queueserver():
         active = is_re_worker_active()
         # print(f"{active=!r}")
         return active
-    except Exception as cause:  # noqa
-        # print(f"{cause=}")
+    except Exception as cause:
+        print(f"{cause=}")
         return False
 
 

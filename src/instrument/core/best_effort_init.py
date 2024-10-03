@@ -28,7 +28,7 @@ if not bec_config.get("BASELINE", True):
 if not bec_config.get("HEADING", True):
     bec.disable_heading()
 
-if not bec_config.get("PLOTS", True) or running_in_queueserver():
+if not bec_config.get("PLOTS", False) or running_in_queueserver():
     bec.disable_plots()
 
 if not bec_config.get("TABLE", True):

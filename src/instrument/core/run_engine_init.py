@@ -13,10 +13,6 @@ import bluesky
 from bluesky.utils import ProgressBarManager
 
 from ..configs.loaders import iconfig
-
-logger = logging.getLogger(__name__)
-logger.info(__file__)
-
 from ..utils.controls_setup import connect_scan_id_pv
 from ..utils.controls_setup import set_control_layer
 from ..utils.controls_setup import set_timeouts
@@ -24,6 +20,9 @@ from ..utils.metadata import MD_PATH
 from ..utils.metadata import re_metadata
 from .best_effort_init import bec
 from .catalog_init import cat
+
+logger = logging.getLogger(__name__)
+logger.info(__file__)
 
 re_config = iconfig.get("RUN_ENGINE", {})
 
