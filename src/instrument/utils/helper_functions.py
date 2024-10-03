@@ -3,7 +3,6 @@ Generic utility helper functions
 =================
 
 .. autosummary::
-
     ~host_on_aps_subnet
     ~running_in_queueserver
     ~debug_python
