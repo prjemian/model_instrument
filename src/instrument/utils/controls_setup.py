@@ -28,7 +28,7 @@ DEFAULT_TIMEOUT = 60  # default used next...
 ophyd_config = iconfig.get("OPHYD", {})
 
 
-def epics_scan_id_source(scan_id_epics, _md):  # TODO: Unused arg?
+def epics_scan_id_source(scan_id_epics, _md):
     """
     Callback function for RunEngine.  Returns *next* scan_id to be used.
 
@@ -51,7 +51,7 @@ def connect_scan_id_pv(RE, pv: str = None):
     """
     Define a PV to use for the RunEngine's `scan_id`.
     """
-    from ophyd import EpicsSignal  # TODO: MUST set timeouts first!
+    from ophyd import EpicsSignal
 
     pv = pv or re_config.get("SCAN_ID_PV")
     if pv is None:

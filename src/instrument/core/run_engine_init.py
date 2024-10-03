@@ -45,7 +45,7 @@ RE.preprocessors.append(sd)
 set_control_layer()
 set_timeouts()  # MUST happen before ANY EpicsSignalBase (or subclass) is created.
 
-connect_scan_id_pv(RE)  # if configured #TODO: What does this mean?
+connect_scan_id_pv(RE)  # if configured
 
 if re_config.get("USE_PROGRESS_BAR", True):
     # Add a progress bar.

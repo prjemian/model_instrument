@@ -57,5 +57,5 @@ else:
 from .devices import *  # noqa: F403
 from .plans import *  # noqa: F403
 
-# TODO: Loads plans for development, remove for production.
+# Loads plans for development, remove for production.
 from .tests.sim_plans import *  # noqa: F403
