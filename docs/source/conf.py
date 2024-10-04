@@ -14,7 +14,7 @@ author = "APS BCDA"
 version = instrument.__version__
 release = version.split("+")[0]
 if "+" in version:
-    release += "+"
+    release += "..."
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

@@ -1,6 +1,6 @@
 """
 EPICS & ophyd related setup
-===================
+===========================
 
 .. autosummary::
     ~oregistry

@@ -11,13 +11,13 @@ dynamic = ["version"]
 description = "Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserver."
 authors = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
-    { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
+    { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
 ]
 maintainers = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
-    { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
+    { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"

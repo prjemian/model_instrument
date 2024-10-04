@@ -6,7 +6,7 @@ Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserv
 
 ```py
 from instrument.startup import *
-from instrument.core.tests.common import *
+from instrument.tests.sim_plans import *
 
 RE(sim_print_plan())
 RE(sim_count_plan())

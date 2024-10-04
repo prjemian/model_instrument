@@ -10,7 +10,7 @@ console, a Jupyter notebook, the queueserver, or even a Python script:
       :linenos:
 
       from instrument.startup import *
-      from instrument.core.tests.common import *
+      from instrument.tests.sim_plans import *
 
       RE(sim_print_plan())
       RE(sim_count_plan())

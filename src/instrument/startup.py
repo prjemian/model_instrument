@@ -33,7 +33,6 @@ if iconfig.get("NEXUS_DATA_FILES") is not None:
     from .callbacks.nexus_data_file_writer import nxwriter  # noqa: F401
 
 if iconfig.get("SPEC_DATA_FILES") is not None:
-    print("test\n\n\n\n")
     from .callbacks.spec_data_file_writer import newSpecFile  # noqa: F401
     from .callbacks.spec_data_file_writer import spec_comment  # noqa: F401
     from .callbacks.spec_data_file_writer import specwriter  # noqa: F401

@@ -1,9 +1,8 @@
 """
 APS utility helper functions
-=================
+============================
 
 .. autosummary::
-
     ~host_on_aps_subnet
     ~aps_dm_setup
 """
