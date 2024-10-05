@@ -22,7 +22,7 @@ Note that ``In [1]:`` and ``In [2]:`` are numbered command prompts from IPython.
 
     In [1]: from instrument.startup import *
     Activating auto-logging. Current session state plus future input saved.
-    Filename       : /home/prjemian/Documents/projects/prjemian/model_instrument/.logs/ipython_console.log
+    Filename       : /path/to/project/.logs/ipython_console.log
     Mode           : rotate
     Output logging : True
     Raw input log  : False
@@ -31,15 +31,15 @@ Note that ``In [1]:`` and ``In [2]:`` are numbered command prompts from IPython.
     I Thu-23:46:37 - ############################################################ startup
     I Thu-23:46:37 - logging started
     I Thu-23:46:37 - logging level = 10
-    I Thu-23:46:37 - /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/_logging_setup.py
-    I Thu-23:46:37 - /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/aps_functions.py
-    I Thu-23:46:37 - /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/helper_functions.py
+    I Thu-23:46:37 - /path/to/project/src/instrument/utils/_logging_setup.py
+    I Thu-23:46:37 - /path/to/project/src/instrument/utils/aps_functions.py
+    I Thu-23:46:37 - /path/to/project/src/instrument/utils/helper_functions.py
     Exception reporting mode: Minimal
     I Thu-23:46:37 - xmode exception level: 'Minimal'
     W Thu-23:46:38 - APS DM setup file does not exist: '/home/dm/etc/dm.setup.sh'
-    I Thu-23:46:38 - /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/controls_setup.py
-    I Thu-23:46:38 - /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/metadata.py
-    I Thu-23:46:38 - RunEngine metadata saved in directory: /home/prjemian/.config/Bluesky_RunEngine_md
+    I Thu-23:46:38 - /path/to/project/src/instrument/utils/controls_setup.py
+    I Thu-23:46:38 - /path/to/project/src/instrument/utils/metadata.py
+    I Thu-23:46:38 - RunEngine metadata saved in directory: /path/to/home/.config/Bluesky_RunEngine_md
     I Thu-23:46:38 - using ophyd control layer: 'pyepics'
 
     In [2]:
