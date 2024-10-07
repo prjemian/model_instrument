@@ -1,6 +1,6 @@
 """
-Databroker catalog, provides ``cat``.
-=====================================
+Databroker catalog, provides ``cat``
+====================================
 
 .. autosummary::
     ~cat

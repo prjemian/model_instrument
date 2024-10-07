@@ -2,16 +2,14 @@
 Write scan(s) to a NeXus/HDF5 file.
 """
 
-__all__ = ["nxwriter"]
-
 import logging
+
+from ..configs.loaders import iconfig
+from ..core.run_engine_init import RE
+from ..utils.aps_functions import host_on_aps_subnet
 
 logger = logging.getLogger(__name__)
 logger.info(__file__)
-
-from ..configs.loaders import iconfig  # noqa
-from ..core.functions import host_on_aps_subnet  # noqa
-from ..core.run_engine import RE  # noqa
 
 if host_on_aps_subnet():
     from apstools.callbacks import NXWriterAPS as NXWriter
@@ -20,6 +18,8 @@ else:
 
 
 class MyNXWriter(NXWriter):
+    """Patch to get sample title from metadata, if available."""
+
     def get_sample_title(self):
         """
         Get the title from the metadata or modify the default.

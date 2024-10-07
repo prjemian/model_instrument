@@ -35,7 +35,7 @@ environment.
     :linenos:
 
     export INSTALL_ENVIRONMENT_NAME=choose_your_own_name
-    conda create -y -n "${INSTALL_ENVIRONMENT_NAME}" python pyqt=5
+    conda create -y -n "${INSTALL_ENVIRONMENT_NAME}" python pyqt=5 pyepics
     conda activate "${INSTALL_ENVIRONMENT_NAME}"
     pip install -e .
 

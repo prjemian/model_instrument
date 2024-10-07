@@ -3,7 +3,6 @@
 """Model Bluesky Data Acquisition Instrument."""
 
 __package__ = "instrument"
-
 try:
     from setuptools_scm import get_version
 

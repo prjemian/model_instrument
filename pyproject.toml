@@ -3,18 +3,21 @@ requires = ["setuptools>=64.0", "setuptools_scm[toml]>=8.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.copyright]
-copyright = "2014-2024, Pete R. Jemian"
+copyright = "2014-2024, APS"
 
 [project]
 name = "instrument"
 dynamic = ["version"]
 description = "Model of a Bluesky Data Acquisition Instrument in console, notebook, & queueserver."
 authors = [
+    { name = "Eric Codrea", email = "ecodrea@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
+    { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
 ]
 maintainers = [
     { name = "Eric Codrea", email = "ecodrea@anl.gov" },
     { name = "Pete Jemian", email = "prjemian+instrument@gmail.com" },
+    { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
 ]
 readme = "README.md"
 requires-python = ">=3.10"

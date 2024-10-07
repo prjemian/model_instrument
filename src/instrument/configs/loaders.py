@@ -9,10 +9,6 @@ Load supported configuration files, such as ``iconfig.yml``.
     ~IConfigFileVersionError
 """
 
-__all__ = [
-    "iconfig",
-]
-
 import logging
 import pathlib
 

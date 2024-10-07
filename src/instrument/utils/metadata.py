@@ -33,7 +33,7 @@ from ..configs.loaders import iconfig
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-re_config = iconfig.get("RE", {})
+re_config = iconfig.get("RUN_ENGINE", {})
 
 DEFAULT_MD_PATH = pathlib.Path.home() / ".config" / "Bluesky_RunEngine_md"
 HOSTNAME = socket.gethostname() or "localhost"

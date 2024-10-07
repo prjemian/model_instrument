@@ -13,17 +13,18 @@ import bluesky
 from bluesky.utils import ProgressBarManager
 
 from ..configs.loaders import iconfig
+from ..utils.controls_setup import connect_scan_id_pv
+from ..utils.controls_setup import set_control_layer
+from ..utils.controls_setup import set_timeouts
+from ..utils.metadata import MD_PATH
+from ..utils.metadata import re_metadata
+from .best_effort_init import bec
+from .catalog_init import cat
 
 logger = logging.getLogger(__name__)
 logger.info(__file__)
 
-from .best_effort import bec  # noqa
-from .catalog import cat  # noqa
-from .epics_setup import connect_scan_id_pv  # noqa
-from .metadata import MD_PATH  # noqa
-from .metadata import re_metadata  # noqa
-
-re_config = iconfig.get("RE", {})
+re_config = iconfig.get("RUN_ENGINE", {})
 
 RE = bluesky.RunEngine()
 """The bluesky RunEngine object."""
@@ -40,6 +41,9 @@ sd = bluesky.SupplementalData()
 RE.subscribe(cat.v1.insert)
 RE.subscribe(bec)
 RE.preprocessors.append(sd)
+
+set_control_layer()
+set_timeouts()  # MUST happen before ANY EpicsSignalBase (or subclass) is created.
 
 connect_scan_id_pv(RE)  # if configured
 

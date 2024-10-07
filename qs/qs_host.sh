@@ -1,6 +1,5 @@
 #!/bin/bash
 # file: qs_host.sh
-
 # Manage the bluesky queueserver host process.
 # Could be in a screen session or run as a direct process.
 

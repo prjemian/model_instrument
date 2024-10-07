@@ -11,11 +11,11 @@ import logging
 
 from bluesky.callbacks.best_effort import BestEffortCallback
 
+from ..configs.loaders import iconfig
+from ..utils.helper_functions import running_in_queueserver
+
 logger = logging.getLogger(__name__)
 logger.info(__file__)
-
-from ..configs.loaders import iconfig  # noqa
-from .functions import running_in_queueserver  # noqa
 
 bec = BestEffortCallback()
 """BestEffortCallback object, creates live tables and plots."""
@@ -28,7 +28,7 @@ if not bec_config.get("BASELINE", True):
 if not bec_config.get("HEADING", True):
     bec.disable_heading()
 
-if not bec_config.get("PLOTS", True) or running_in_queueserver():
+if not bec_config.get("PLOTS", False) or running_in_queueserver():
     bec.disable_plots()
 
 if not bec_config.get("TABLE", True):
