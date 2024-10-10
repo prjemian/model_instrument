@@ -73,11 +73,11 @@ def mpl_setup():
                 plt.switch_backend("tkagg")
             except ImportError:
                 print("tkagg backend not available. Trying qtagg.")
-                try:
-                    # Fallback to 'qtagg' backend if 'tkagg' is not available
-                    plt.switch_backend("qtagg")  # macbook backend
-                except ImportError:
-                    print("qtagg backend also not available. Using default backend.")
+            try:
+                # Fallback to 'qtagg' backend if 'tkagg' is not available
+                plt.switch_backend("qtagg")  # macbook backend
+            except ImportError:
+                print("qtagg backend also not available. Using default backend.")
 
             # Turn on interactive mode after setting the backend
             plt.ion()
