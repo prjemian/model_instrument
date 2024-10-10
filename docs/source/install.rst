@@ -27,14 +27,15 @@ Install for routine data acquisition
 ------------------------------------
 
 These commands create a conda environment and then install all packages required
-by this ``instrument`` package for routine data acquisition. Replace the text
-``choose_your_own_name`` with the name you wish to use for this conda
-environment.
+by this ``instrument`` package for routine data acquisition.
+
+.. tip:: Replace the text ``model_instrument_env`` with the name you wish to use
+    for this conda environment.
 
 .. code-block:: bash
     :linenos:
 
-    export INSTALL_ENVIRONMENT_NAME=choose_your_own_name
+    export INSTALL_ENVIRONMENT_NAME=model_instrument_env
     conda create -y -n "${INSTALL_ENVIRONMENT_NAME}" python pyqt=5 pyepics
     conda activate "${INSTALL_ENVIRONMENT_NAME}"
     pip install -e .
