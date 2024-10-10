@@ -68,5 +68,13 @@ def mpl_setup():
         import matplotlib.pyplot as plt
 
         if not is_notebook():
-            plt.switch_backend("qtagg")
+            # plt.switch_backend("qtagg")
+            try:
+                plt.switch_backend("tkagg")
+            except:
+                pass
+            try:
+                plt.switch_backend("qtagg")
+            except:
+                pass
             plt.ion()
