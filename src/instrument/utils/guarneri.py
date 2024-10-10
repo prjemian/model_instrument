@@ -7,20 +7,18 @@ import os
 import time
 from pathlib import Path
 from typing import Mapping
+from typing import Sequence
 
 import tomlkit
 from ophyd import Device as ThreadedDevice
 from ophyd.sim import make_fake_device
-from ophyd_async.core import DEFAULT_TIMEOUT, NotConnected
+from ophyd_async.core import DEFAULT_TIMEOUT
+from ophyd_async.core import NotConnected
 from ophydregistry import Registry
-from rich import print as rprint
 
 from .exceptions import InvalidConfiguration
 
 log = logging.getLogger(__name__)
-
-
-instrument = None
 
 
 class Instrument:
@@ -183,7 +181,7 @@ class Instrument:
         # Filter out the disconnected devices
         new_devices = []
         exceptions = {}
-        for device, result in zip(self.devices, results):
+        for device, result in zip(self.devices, results, strict=False):
             if result is None:
                 log.debug(f"Successfully connected device {device.name}")
                 new_devices.append(device)
@@ -195,7 +193,9 @@ class Instrument:
         timeout_reached = False
         while not timeout_reached and len(threaded_devices) > 0:
             # Remove any connected devices for the running list
-            connected_devices = [dev for dev in threaded_devices if getattr(dev, "connected", True)]
+            connected_devices = [
+                dev for dev in threaded_devices if getattr(dev, "connected", True)
+            ]
             new_devices.extend(connected_devices)
             threaded_devices = [
                 dev for dev in threaded_devices if dev not in connected_devices
@@ -214,7 +214,12 @@ class Instrument:
             raise NotConnected(exceptions)
         return new_devices
 
-    async def load(self, connect: bool = True, device_classes: Mapping | None = None, config_files: Sequence[Path] | None = None):
+    async def load(
+        self,
+        connect: bool = True,
+        device_classes: Mapping | None = None,
+        config_files: Sequence[Path] | None = None,
+    ):
         """Load instrument specified in config files.
 
         Unless, explicitly overridden by the *config_files* argument,
@@ -242,7 +247,9 @@ class Instrument:
                 config_files = os.environ.get("HAVEN_CONFIG_FILES", "")
                 config_files = [Path(fp) for fp in config_files.split(":")]
             else:
-                config_files = [Path(__file__).parent.resolve() / "iconfig_testing.toml"]
+                config_files = [
+                    Path(__file__).parent.resolve() / "iconfig_testing.toml"
+                ]
         # Load the instrument from config files
         old_classes = self.device_classes
         try:
@@ -265,77 +272,9 @@ class Instrument:
             self.registry.register(device)
 
 
-class HavenInstrument(Instrument):
-    async def load(
-        self,
-        config: Mapping = None,
-        wait_for_connection: bool = True,
-        timeout: int = 5,
-        return_devices: bool = False,
-        reset_devices: bool = True,
-    ):
-        """Load the beamline instrumentation.
-
-        This function will reach out and query various IOCs for motor
-        information based on the information in *config* (see
-        ``iconfig_default.toml`` for examples). Based on the
-        configuration, it will create Ophyd devices and register them with
-        *registry*.
-
-        Parameters
-        ==========
-        registry:
-          The registry into which the ophyd devices will be placed.
-        config:
-          The beamline configuration read in from TOML files. Mostly
-          useful for testing.
-        wait_for_connection
-          If true, only connected devices will be kept.
-        timeout
-          How long to wait for if *wait_for_connection* is true.
-        return_devices
-          If true, return the newly loaded devices when complete.
-        reset_registry
-          If true, existing devices will be removed before loading.
-
-        """
-        if reset_devices:
-            self.registry.clear()
-        await super().load()
-        # VME-style Motors happen later so duplicate motors can be
-        # removed
-        await super().load(device_classes={"motors": load_motors})
-        # Return the final list
-        if return_devices:
-            return instrument.devices
-        else:
-            return instrument
-
-
-beamline = HavenInstrument(
-    {
-        # Ophyd-async devices
-        "ion_chamber": IonChamber,
-        "high_heat_load_mirror": HighHeatLoadMirror,
-        "kb_mirrors": KBMirrors,
-        "xy_stage": XYStage,
-        "table": Table,
-        "aerotech_stage": AerotechStage,
-        "motor": Motor,
-        # Threaded ophyd devices
-        "blade_slits": BladeSlits,
-        "aperture_slits": ApertureSlits,
-        "capillary_heater": CapillaryHeater,
-        "power_supply": NHQ203MChannel,
-        "synchrotron": ApsMachine,
-        "robot": Robot,
-        "pfcu4": PFCUFilterBank,  # <-- fails if mocked
-        "pss_shutter": PssShutter,
-        "energy": EnergyPositioner,
-        "xspress": make_xspress_device,
-        "dxp": make_dxp_device,
-        "beamline_manager": BeamlineManager,
-        "area_detector": make_area_detector,
-        "scaler": MultiChannelScaler,
-    },
-)
+# beamline = Instrument(
+#     {
+#         # Threaded ophyd devices
+#         "synchrotron": ApsMachine,
+#     },
+# )

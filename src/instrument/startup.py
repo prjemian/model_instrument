@@ -26,6 +26,7 @@ from .core.best_effort_init import peaks  # noqa: F401
 from .core.catalog_init import cat  # noqa: F401
 from .core.run_engine_init import RE  # noqa: F401
 from .core.run_engine_init import sd  # noqa: F401
+from .utils.guarneri import Instrument
 from .utils.helper_functions import running_in_queueserver
 
 # Configure the session with callbacks, devices, and plans.
@@ -51,10 +52,20 @@ else:
     from bluesky import plan_stubs as bps  # noqa: F401
     from bluesky import plans as bp  # noqa: F401
 
-    from .utils.controls_setup import oregistry  # noqa: F401
+    # from .utils.controls_setup import oregistry  # noqa: F401
 
-from .devices import *  # noqa: F403
+# from .devices import *  # noqa: F403
+
+from devices.simulated_1d_detector import sim_1d  # noqa: F401
+from devices.simulated_1d_detector import sim_motor  # noqa: F401
+
 from .plans import *  # noqa: F403
 
+beamline = Instrument(
+    {
+        # Threaded ophyd devices
+        "synchrotron": ApsMachine,
+    },
+)
 # Loads plans for development, remove for production.
 from .tests.sim_plans import *  # noqa: F403

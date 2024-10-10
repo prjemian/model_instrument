@@ -14,8 +14,8 @@ import logging
 
 import ophyd
 from ophyd.signal import EpicsSignalBase
-from ophydregistry import Registry
 
+# from ophydregistry import Registry
 from ..configs.loaders import iconfig
 
 logger = logging.getLogger(__name__)
@@ -101,5 +101,5 @@ def set_timeouts():
         )
 
 
-oregistry = Registry(auto_register=True)
-"""Registry of all ophyd-style Devices and Signals."""
+# oregistry = Registry(auto_register=True)
+# """Registry of all ophyd-style Devices and Signals."""

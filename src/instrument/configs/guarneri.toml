@@ -77,10 +77,10 @@ undulator_prefix = "id_ioc:"
 
 # Ion chambers
 # ============
-# 
+#
 # Each ion chamber is listed in a section starting with
 #   [[ ion_chamber ]]
-# 
+#
 # The *name* parameter can be omitted, in which case the name will be
 # updated based on the .DESC PV for the scaler channel.
 
@@ -97,7 +97,7 @@ name = "I0"
 
 # Scalers
 # =======
-# 
+#
 # These definitions are not for using ion chambers, but for if the
 # scaler is needed as an independent device. The ion chamber
 # defintions include a scaler channel.
@@ -110,7 +110,7 @@ num_channels = 32
 
 # Motors
 # ======
-# 
+#
 # Add a new section for each IOC (or IOC prefix) that has motors
 # matching the format {prefix}:m1. *num_motors* determines how many
 # motors will be read. The example below will load three motors with
