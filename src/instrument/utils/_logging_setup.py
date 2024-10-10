@@ -29,84 +29,22 @@ References:
 """
 
 import logging
-import pathlib
-
-from apstools.utils import file_log_handler
-from apstools.utils import setup_IPython_console_logging
-from apstools.utils import stream_log_handler
-
-from ..configs.loaders import iconfig
 
 
 def configure_logging():
-    """
-    configure logging setup to be used with instrument package
-    """
-    SESSION_NAME = "bluesky-session"
-    IPYTHON_LOGGER = "ipython_logger"
-
-    BYTE = 1
-    kB = 1024 * BYTE
-    MB = 1024 * kB
-
-    logging_setup = iconfig.get("LOGGING", {})
-
-    log_path = logging_setup.get("LOG_PATH", None)
-    if log_path is not None:
-        log_path = pathlib.Path(log_path)
-
-    CHOICES = dict(
-        LOG_PATH=log_path,
-        MAX_BYTES=logging_setup.get("MAX_BYTES", 1 * MB),
-        NUMBER_OF_PREVIOUS_BACKUPS=logging_setup.get("NUMBER_OF_PREVIOUS_BACKUPS", 9),
+    """Temporary logging setup.  Ignores iconfig for now."""
+    brief_date = "%a-%H:%M:%S"
+    brief_format = "%(levelname)-.1s %(asctime)s: %(message)s"
+    logging.basicConfig(
+        encoding="utf-8",
+        level=logging.INFO,
+        format=brief_format,
+        datefmt=brief_date,
     )
 
-    # see the table above for details about this dictionary
-    # TODO: Define these logger settings in the iconfig.yml file.
-    ACTIVATE_LOGGERS = {
-        # "bluesky": "DEBUG",
-        # "bluesky.emit_document": "DEBUG",
-        # "bluesky.RE.msg": "DEBUG",
-        # "ophyd": "DEBUG",
-        # "ophyd.control_layer": "WARNING",
-        # "ophyd.objects": "DEBUG",
-        # "databroker": "DEBUG",
-    }
+    logger = logging.getLogger(__name__)
+    logger.info(__file__)
 
-    logger = logging.getLogger(SESSION_NAME)
-    """Basic-level logging object"""
-
-    logger.setLevel(logging.DEBUG)  # allow any log content at this level
-    logger.addHandler(stream_log_handler())  # terse log to the console
-    logger.addHandler(
-        file_log_handler(  # verbose log to a file
-            backupCount=CHOICES["NUMBER_OF_PREVIOUS_BACKUPS"],
-            file_name_base=IPYTHON_LOGGER,
-            log_path=CHOICES["LOG_PATH"],
-            maxBytes=CHOICES["MAX_BYTES"],
-        )
-    )
-    setup_IPython_console_logging(log_path=CHOICES["LOG_PATH"])
-
-    logger.info("#" * 60 + " startup")
-    logger.info("logging started")
-    logger.info(f"logging level = {logger.level}")
-
-    # log messages from the instrument package: '__package__'
-    _l = logging.getLogger(__package__)
-    _l.setLevel("DEBUG")
-    _l.addHandler(stream_log_handler())  # terse log to the console
-    _l.info(__file__)
-
-    for logger_name, level in ACTIVATE_LOGGERS.items():
-        _l = logging.getLogger(logger_name)
-        _l.setLevel(logging.DEBUG)  # allow any log content at this level
-        _l.addHandler(
-            file_log_handler(  # logger to a file
-                backupCount=CHOICES["NUMBER_OF_PREVIOUS_BACKUPS"],
-                file_name_base=logger_name,
-                level=level,  # filter reporting to this level
-                log_path=CHOICES["LOG_PATH"],
-                maxBytes=CHOICES["MAX_BYTES"],
-            )
-        )
+    # calm logging in these other modules
+    for module in "bluesky databroker ophyd".split():
+        logging.getLogger(module).setLevel(logging.WARNING)
