@@ -62,19 +62,22 @@ def is_notebook():
 
 def mpl_setup():
     """
-    MatPlotLib setup.
+    Matplotlib setup based on environment (Notebook or non-Notebook).
     """
     if not running_in_queueserver():
         import matplotlib.pyplot as plt
 
         if not is_notebook():
-            # plt.switch_backend("qtagg")
             try:
+                # Try switching to 'tkagg' backend first
                 plt.switch_backend("tkagg")
-            except:
-                pass
-            try:
-                plt.switch_backend("qtagg")
-            except:
-                pass
+            except ImportError:
+                print("tkagg backend not available. Trying qtagg.")
+                try:
+                    # Fallback to 'qtagg' backend if 'tkagg' is not available
+                    plt.switch_backend("qtagg")  # macbook backend
+                except ImportError:
+                    print("qtagg backend also not available. Using default backend.")
+
+            # Turn on interactive mode after setting the backend
             plt.ion()
