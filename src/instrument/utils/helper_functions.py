@@ -11,6 +11,8 @@ Generic utility helper functions
 
 import logging
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 from bluesky_queueserver import is_re_worker_active
 from IPython import get_ipython
 
@@ -65,19 +67,6 @@ def mpl_setup():
     Matplotlib setup based on environment (Notebook or non-Notebook).
     """
     if not running_in_queueserver():
-        import matplotlib.pyplot as plt
-
         if not is_notebook():
-            try:
-                # Try switching to 'tkagg' backend first
-                plt.switch_backend("tkagg")
-            except ImportError:
-                print("tkagg backend not available. Trying qtagg.")
-            try:
-                # Fallback to 'qtagg' backend if 'tkagg' is not available
-                plt.switch_backend("qtagg")  # macbook backend
-            except ImportError:
-                print("qtagg backend also not available. Using default backend.")
-
-            # Turn on interactive mode after setting the backend
+            mpl.use("qtAgg")  # Set the backend early
             plt.ion()

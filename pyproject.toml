@@ -47,6 +47,7 @@ dependencies = [
     "ophyd",
     "pysumreg",
     "qtpy",
+    "PyQt5>5.15",
 ]
 
 [project.optional-dependencies]
