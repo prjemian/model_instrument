@@ -18,7 +18,7 @@ RE(sim_rel_scan_plan())
 Set up the development environment.
 
 ```bash
-conda create -y -n model_instrument python=3.10 pyepics
+conda create -y -n model_instrument python=3.11 pyepics
 conda activate model_instrument
 pip install -e ."[all]"
 ```
