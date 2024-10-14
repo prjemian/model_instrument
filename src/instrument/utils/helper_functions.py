@@ -11,6 +11,8 @@ Generic utility helper functions
 
 import logging
 
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 from bluesky_queueserver import is_re_worker_active
 from IPython import get_ipython
 
@@ -62,10 +64,9 @@ def is_notebook():
 
 def mpl_setup():
     """
-    MatPlotLib setup.
+    Matplotlib setup based on environment (Notebook or non-Notebook).
     """
     if not running_in_queueserver():
-        import matplotlib.pyplot as plt
-
         if not is_notebook():
+            mpl.use("qtAgg")  # Set the backend early
             plt.ion()
