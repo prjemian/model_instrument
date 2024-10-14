@@ -28,6 +28,7 @@ BRIEF_DATE = "%a-%H:%M:%S"
 BRIEF_FORMAT = "%(levelname)-.1s %(asctime)s.%(msecs)03d: %(message)s"
 DEFAULT_CONFIG_FILE = pathlib.Path(__file__).parent.parent / "configs" / "logging.yml"
 
+
 # Add your custom logging level at the top-level, before configure_logging()
 def addLoggingLevel(levelName, levelNum, methodName=None):
     """
@@ -58,11 +59,11 @@ def addLoggingLevel(levelName, levelNum, methodName=None):
         methodName = levelName.lower()
 
     if hasattr(logging, levelName):
-       raise AttributeError('{} already defined in logging module'.format(levelName))
+        raise AttributeError("{} already defined in logging module".format(levelName))
     if hasattr(logging, methodName):
-       raise AttributeError('{} already defined in logging module'.format(methodName))
+        raise AttributeError("{} already defined in logging module".format(methodName))
     if hasattr(logging.getLoggerClass(), methodName):
-       raise AttributeError('{} already defined in logger class'.format(methodName))
+        raise AttributeError("{} already defined in logger class".format(methodName))
 
     # This method was inspired by the answers to Stack Overflow post
     # http://stackoverflow.com/q/2183233/2988730, especially
@@ -70,6 +71,7 @@ def addLoggingLevel(levelName, levelNum, methodName=None):
     def logForLevel(self, message, *args, **kwargs):
         if self.isEnabledFor(levelNum):
             self._log(levelNum, message, args, **kwargs)
+
     def logToRoot(message, *args, **kwargs):
         logging.log(levelNum, message, *args, **kwargs)
 
@@ -78,7 +80,9 @@ def addLoggingLevel(levelName, levelNum, methodName=None):
     setattr(logging.getLoggerClass(), methodName, logForLevel)
     setattr(logging, methodName, logToRoot)
 
-addLoggingLevel('BSDEV', logging.INFO - 5)
+
+addLoggingLevel("BSDEV", logging.INFO - 5)
+
 
 def configure_logging():
     """Configure logging as described in file."""
@@ -161,7 +165,7 @@ def _setup_file_logger(logger, cfg):
     if cfg.get("rotate_on_startup", False):
         handler.doRollover()
     logger.addHandler(handler)
-    logger.info("%s Bluesky Startup Initialized", "*" * 40) #TODO: check
+    logger.info("%s Bluesky Startup Initialized", "*" * 40)
     logger.bsdev(__file__)
     logger.bsdev("Log file: %s", file_name)
 
@@ -175,7 +179,10 @@ def _setup_ipython_logger(logger, cfg):
     log_path = pathlib.Path(cfg.get("log_directory", ".logs")).resolve()
     try:
         from IPython import get_ipython
-        print("\nBelow are the logging setting for your session\nThese setting have no impact on your experiment\n")
+
+        print(
+            "\nBelow are the logging setting for your session\nThese setting have no impact on your experiment\n"
+        )
         # start logging console to file
         # https://ipython.org/ipython-doc/3/interactive/magics.html#magic-logstart
         _ipython = get_ipython()
@@ -191,6 +198,7 @@ def _setup_ipython_logger(logger, cfg):
             print(f"Could not setup console logging: {exc}")
         else:
             logger.exception("Could not setup console logging.")
+
 
 def _setup_module_logging(cfg):
     """Internal: Set logging level for each named module."""

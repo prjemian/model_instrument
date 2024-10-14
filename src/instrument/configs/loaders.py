@@ -13,7 +13,7 @@ import logging
 import pathlib
 
 import yaml
-# TODO: Order of operations
+
 logger = logging.getLogger(__name__)
 logger.bsdev(__file__)
 instrument_path = pathlib.Path(__file__).parent.parent
