@@ -16,7 +16,7 @@ from ophyd.sim import motor
 from ophyd.sim import noisy_det
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 DEFAULT_MD = {"title": "test run with simulator(s)"}
 

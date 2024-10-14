@@ -28,10 +28,10 @@ import pyRestTable
 import pysumreg
 import spec2nexus
 
-from ..configs.loaders import iconfig
+from .config_loaders import iconfig
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 re_config = iconfig.get("RUN_ENGINE", {})
 

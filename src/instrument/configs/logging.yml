@@ -4,6 +4,7 @@ console_logs:
   date_format: "%a-%H:%M:%S"
   log_format: "%(levelname)-.1s %(asctime)s.%(msecs)03d: %(message)s"
   level: info
+  root_level: bsdev
 
 file_logs:
   date_format: "%Y-%m-%d %H:%M:%S"
