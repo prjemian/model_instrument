@@ -127,12 +127,13 @@ def _setup_console_logger(logger, cfg):
     """
     logging.basicConfig(
         encoding="utf-8",
-        level=cfg["level"].upper(),
+        level=cfg["root_level"].upper(),
         format=cfg["log_format"],
         datefmt=cfg["date_format"],
         force=True,  # replace any previous setup
     )
-
+    h = logger.handlers[0]
+    h.setLevel(cfg["level"].upper())
 
 def _setup_file_logger(logger, cfg):
     """Record log messages in file(s)."""
