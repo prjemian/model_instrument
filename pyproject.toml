@@ -20,7 +20,7 @@ maintainers = [
     { name = "Rafael Vescovi", email = "rvescovi@anl.gov" },
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 keywords = ['bluesky', 'queueserver']
 license = { file = "src/instrument/LICENSE" }
 classifiers = [
@@ -127,7 +127,7 @@ addopts = ["--import-mode=importlib", "-x"]
 junit_family = "xunit1"
 filterwarnings = [
     "ignore::DeprecationWarning",
-    "ignore::pottery.exceptions.InefficientAccessWarning",
+    "ignore::PendingDeprecationWarning",
 ]
 
 [tool.ruff]
