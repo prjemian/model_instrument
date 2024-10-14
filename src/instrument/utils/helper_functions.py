@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 from bluesky_queueserver import is_re_worker_active
 from IPython import get_ipython
 
-from ..configs.loaders import iconfig
+from .config_loaders import iconfig
 
 logger = logging.getLogger(__name__)
 logger.bsdev(__file__)

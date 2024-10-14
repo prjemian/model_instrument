@@ -28,7 +28,7 @@ import pyRestTable
 import pysumreg
 import spec2nexus
 
-from ..configs.loaders import iconfig
+from .config_loaders import iconfig
 
 logger = logging.getLogger(__name__)
 logger.bsdev(__file__)

@@ -4,9 +4,9 @@ Write scan(s) to a NeXus/HDF5 file.
 
 import logging
 
-from ..configs.loaders import iconfig
 from ..core.run_engine_init import RE
 from ..utils.aps_functions import host_on_aps_subnet
+from ..utils.config_loaders import iconfig
 
 logger = logging.getLogger(__name__)
 logger.bsdev(__file__)
