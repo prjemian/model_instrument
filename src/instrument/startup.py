@@ -12,7 +12,7 @@ Includes:
 # logging setup first
 import logging
 
-from .utils._logging_setup import configure_logging
+from .utils.logging_setup import configure_logging
 
 configure_logging()
 

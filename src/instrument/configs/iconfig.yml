@@ -78,13 +78,5 @@ OPHYD:
         PV_WRITE: *TIMEOUT
         PV_CONNECTION: *TIMEOUT
 
-LOGGING:
-    ### Uncomment any of these to override the defaults
-    # MAX_BYTES: 1000000
-    NUMBER_OF_PREVIOUS_BACKUPS: 9
-    # LOG_PATH: /tmp
-    ### If LOG_PATH undefined, this session will log into PWD/.logs/
-    ### where PWD is present working directory when session is started
-
 # Control detail of exception traces in IPython (console and notebook).
 XMODE_DEBUG_LEVEL: Minimal
