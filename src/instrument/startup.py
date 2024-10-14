@@ -17,7 +17,7 @@ from .utils.logging_setup import configure_logging
 configure_logging()
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 # Bluesky data acquisition setup
 from .configs.loaders import iconfig

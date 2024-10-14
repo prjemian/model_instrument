@@ -31,7 +31,7 @@ import spec2nexus
 from ..configs.loaders import iconfig
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 re_config = iconfig.get("RUN_ENGINE", {})
 

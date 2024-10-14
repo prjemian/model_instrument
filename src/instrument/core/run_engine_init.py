@@ -22,7 +22,7 @@ from .best_effort_init import bec
 from .catalog_init import cat
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 re_config = iconfig.get("RUN_ENGINE", {})
 

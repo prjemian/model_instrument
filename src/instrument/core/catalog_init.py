@@ -13,7 +13,7 @@ import databroker
 from ..configs.loaders import iconfig
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 TEMPORARY_CATALOG_NAME = "temp"
 

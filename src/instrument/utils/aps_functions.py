@@ -13,7 +13,7 @@ import pathlib
 import socket
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 
 def aps_dm_setup(dm_setup_file):

@@ -15,7 +15,7 @@ from ..configs.loaders import iconfig
 from ..utils.helper_functions import running_in_queueserver
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 bec = BestEffortCallback()
 """BestEffortCallback object, creates live tables and plots."""

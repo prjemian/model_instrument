@@ -9,7 +9,8 @@ from ..core.run_engine_init import RE
 from ..utils.aps_functions import host_on_aps_subnet
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
+
 
 if host_on_aps_subnet():
     from apstools.callbacks import NXWriterAPS as NXWriter
