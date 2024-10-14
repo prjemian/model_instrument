@@ -135,6 +135,7 @@ def _setup_console_logger(logger, cfg):
     h = logger.handlers[0]
     h.setLevel(cfg["level"].upper())
 
+
 def _setup_file_logger(logger, cfg):
     """Record log messages in file(s)."""
     formatter = logging.Formatter(
@@ -182,7 +183,8 @@ def _setup_ipython_logger(logger, cfg):
         from IPython import get_ipython
 
         print(
-            "\nBelow are the logging setting for your session\nThese setting have no impact on your experiment\n"
+            "\nBelow are the logging settings for your session."
+            "\nThese settings have no impact on your experiment.\n"
         )
         # start logging console to file
         # https://ipython.org/ipython-doc/3/interactive/magics.html#magic-logstart
