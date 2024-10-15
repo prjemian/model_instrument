@@ -182,10 +182,6 @@ def _setup_ipython_logger(logger, cfg):
     try:
         from IPython import get_ipython
 
-        print(
-            "\nBelow are the logging settings for your session."
-            "\nThese settings have no impact on your experiment.\n"
-        )
         # start logging console to file
         # https://ipython.org/ipython-doc/3/interactive/magics.html#magic-logstart
         _ipython = get_ipython()
@@ -193,6 +189,10 @@ def _setup_ipython_logger(logger, cfg):
         log_mode = cfg.get("log_mode", "rotate")
         options = cfg.get("options", "-o -t")
         if _ipython is not None:
+            print(
+                "\nBelow are the IPython logging settings for your session."
+                "\nThese settings have no impact on your experiment.\n"
+            )
             _ipython.magic(f"logstart {options} {log_file} {log_mode}")
             if logger is not None:
                 logger.bsdev("Console logging: %s", log_file)
