@@ -45,6 +45,11 @@ from instrument.startup import *
 
 See this [example](./docs/source/demo.ipynb).
 
+## Configuration files
+
+- `configs/iconfig.yml` - configuration for data collection
+- `configs/logging.yml` - configuration for session logging to console and/or files
+
 ## queueserver
 
 The queueserver has a host process that manages a RunEngine. Client sessions
@@ -70,11 +75,8 @@ use this one.
 ```bash
 queue-monitor &
 ```
-# Configuration files
 
-- `iconfig.yml` - configuration for data collection
-
-# Support for the Bluesky Queueserver.
+## Support for the Bluesky Queueserver.
 
 File [`qs-config.yml`](../qs/qs-config.yml) contains all configuration of the QS
 host process. See the
@@ -85,7 +87,7 @@ The QS host process writes files into this directory. This directory can be
 relocated. However, it should not be moved into the instrument package since
 that might be installed into a read-only directory.
 
-## shell script
+### shell script
 
 A [shell script](./qs_host.sh) is used to start the QS host process. Typically,
 it is run in the background: `./qs/qs_host.sh restart`.  This command looks for
@@ -117,3 +119,9 @@ subdirectory.
 cd ./qs
 start-re-manager --config=./qs-config.yml
 ```
+
+## Testing
+
+Use this command to run the test suite locally:
+
+`pytest -vvv --lf ./src`
