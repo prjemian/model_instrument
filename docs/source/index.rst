@@ -23,6 +23,7 @@ console, a Jupyter notebook, the queueserver, or even a Python script:
    demo
    sessions
    install
+   logging_config
    api/index
    license
 

@@ -15,11 +15,12 @@ import pathlib
 import apstools.callbacks
 import apstools.utils
 
-from ..configs.loaders import iconfig
 from ..core.run_engine_init import RE
+from ..utils.config_loaders import iconfig
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
+
 
 DEFAULT_FILE_EXTENSION = "dat"
 file_extension = iconfig.get("FILE_EXTENSION", DEFAULT_FILE_EXTENSION)

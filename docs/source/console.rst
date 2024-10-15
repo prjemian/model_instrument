@@ -21,26 +21,34 @@ Note that ``In [1]:`` and ``In [2]:`` are numbered command prompts from IPython.
 .. code-block:: ipy
 
     In [1]: from instrument.startup import *
+    I Mon-12:02:54.126: **************************************** startup
+    I Mon-12:02:54.126: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/logging_setup.py
+    I Mon-12:02:54.126: Log file: /home/prjemian/Documents/projects/prjemian/model_instrument/.logs/logging.log
     Activating auto-logging. Current session state plus future input saved.
-    Filename       : /path/to/project/.logs/ipython_console.log
+    Filename       : /home/prjemian/Documents/projects/prjemian/model_instrument/.logs/ipython_log.py
     Mode           : rotate
     Output logging : True
     Raw input log  : False
     Timestamping   : True
     State          : active
-    I Thu-23:46:37 - ############################################################ startup
-    I Thu-23:46:37 - logging started
-    I Thu-23:46:37 - logging level = 10
-    I Thu-23:46:37 - /path/to/project/src/instrument/utils/_logging_setup.py
-    I Thu-23:46:37 - /path/to/project/src/instrument/utils/aps_functions.py
-    I Thu-23:46:37 - /path/to/project/src/instrument/utils/helper_functions.py
+    I Mon-12:02:54.127: Console logging: /home/prjemian/Documents/projects/prjemian/model_instrument/.logs/ipython_log.py
+    I Mon-12:02:54.127: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/startup.py
+    I Mon-12:02:54.127: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/aps_functions.py
+    I Mon-12:02:54.444: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/helper_functions.py
     Exception reporting mode: Minimal
-    I Thu-23:46:37 - xmode exception level: 'Minimal'
-    W Thu-23:46:38 - APS DM setup file does not exist: '/home/dm/etc/dm.setup.sh'
-    I Thu-23:46:38 - /path/to/project/src/instrument/utils/controls_setup.py
-    I Thu-23:46:38 - /path/to/project/src/instrument/utils/metadata.py
-    I Thu-23:46:38 - RunEngine metadata saved in directory: /path/to/home/.config/Bluesky_RunEngine_md
-    I Thu-23:46:38 - using ophyd control layer: 'pyepics'
+    I Mon-12:02:54.444: xmode exception level: 'Minimal'
+    W Mon-12:02:54.516: APS DM setup file does not exist: '/home/dm/etc/dm.setup.sh'
+    I Mon-12:02:54.642: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/core/best_effort_init.py
+    I Mon-12:02:55.245: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/core/catalog_init.py
+    I Mon-12:02:55.643: Databroker catalog: temp
+    I Mon-12:02:55.644: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/controls_setup.py
+    I Mon-12:02:55.718: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/utils/metadata.py
+    I Mon-12:02:55.718: RunEngine metadata saved in directory: /home/prjemian/.config/Bluesky_RunEngine_md
+    I Mon-12:02:55.718: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/core/run_engine_init.py
+    I Mon-12:02:55.720: using ophyd control layer: 'pyepics'
+    I Mon-12:02:55.779: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/callbacks/spec_data_file_writer.py
+    I Mon-12:02:55.780: SPEC data file: /home/prjemian/Documents/projects/prjemian/model_instrument/20241014-120255.dat
+    I Mon-12:02:55.813: /home/prjemian/Documents/projects/prjemian/model_instrument/src/instrument/tests/sim_plans.py
 
     In [2]:
 

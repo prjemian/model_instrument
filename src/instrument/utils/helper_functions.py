@@ -16,10 +16,10 @@ import matplotlib.pyplot as plt
 from bluesky_queueserver import is_re_worker_active
 from IPython import get_ipython
 
-from ..configs.loaders import iconfig
+from .config_loaders import iconfig
 
 logger = logging.getLogger(__name__)
-logger.info(__file__)
+logger.bsdev(__file__)
 
 
 def running_in_queueserver():
@@ -40,7 +40,8 @@ def debug_python():
     if _ip is not None:
         _xmode_level = iconfig.get("XMODE_DEBUG_LEVEL", "Minimal")
         _ip.run_line_magic("xmode", _xmode_level)
-        logger.info("xmode exception level: '%s'", _xmode_level)
+        print("\nEnd of IPython settings\n")
+        logger.bsdev("xmode exception level: '%s'", _xmode_level)
 
 
 def is_notebook():
